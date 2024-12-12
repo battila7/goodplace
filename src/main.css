@@ -1,3 +1,8 @@
+.playfair-display {
+    font-family: 'Playfair Display', serif;
+    font-optical-sizing: auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

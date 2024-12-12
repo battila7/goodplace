@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server ./src -c-1"
+    "serve": "http-server ./src -c-1",
+    "esbuild": "./node_modules/.bin/esbuild ./src/js/**.js --bundle --splitting --format=esm --outdir=src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "0.24.0",
     "http-server": "14.1.1",
     "tailwindcss": "3.4.16"
+  },
+  "dependencies": {
+    "preline": "2.6.0"
   }
 }
