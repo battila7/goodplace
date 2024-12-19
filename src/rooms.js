@@ -4287,6 +4287,18 @@ var module_default2 = src_default2;
 // src/js/rooms.js
 window.Alpine = module_default;
 module_default.plugin(module_default2);
+module_default.data("rooms", () => ({
+  rooms: [
+    {
+      name: "Szoba 1",
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius minima molestiae beatae natus voluptate vel facere aliquid harum! Facere vero deserunt rerum. Architecto error pariatur expedita beatae! Nam, minus rem!"
+    },
+    {
+      name: "Szoba 2",
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius minima molestiae beatae natus voluptate vel facere aliquid harum! Facere vero deserunt rerum. Architecto error pariatur expedita beatae! Nam, minus rem!"
+    }
+  ]
+}));
 module_default.data("gallery", () => ({
   imageGalleryOpened: false,
   imageGalleryActiveUrl: null,
@@ -4317,34 +4329,6 @@ module_default.data("gallery", () => ({
       {
         src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg",
         title: "Fent"
-      }
-    ],
-    [
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg",
-        title: "A"
-      },
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg",
-        title: "B"
-      },
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg",
-        title: "C"
-      }
-    ],
-    [
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg",
-        title: "A"
-      },
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg",
-        title: "B"
-      },
-      {
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg",
-        title: "C"
       }
     ]
   ],
