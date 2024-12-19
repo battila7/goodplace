@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./main.dist.css" rel="stylesheet">
+  <link href="/main.dist.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,13 +54,13 @@
                     </div>
                     
                     <div class="lg:inline-block border-t border-dashed border-gray-200 first:border-t-0 py-1 first:pt-0 last:pb-0 lg:border-0 lg:py-0">
-                    <a href="rooms.html" class="py-2 px-3 lg:px-2.5 lg:px-2 w-full lg:w-auto flex items-center text-sm text-start font-medium text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100">
+                    <a href="/rooms.html" class="py-2 px-3 lg:px-2.5 lg:px-2 w-full lg:w-auto flex items-center text-sm text-start font-medium text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100">
                         Szobáink
                     </a>
                     </div>
                     
                     <div class="lg:inline-block border-t border-dashed border-gray-200 first:border-t-0 py-1 first:pt-0 last:pb-0 lg:border-0 lg:py-0">
-                    <a href="extras.html" class="py-2 px-3 lg:px-2.5 lg:px-2 w-full lg:w-auto flex items-center text-sm text-start font-medium text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100">
+                    <a href="/extras.html" class="py-2 px-3 lg:px-2.5 lg:px-2 w-full lg:w-auto flex items-center text-sm text-start font-medium text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100">
                         Ajándék
                     </a>
                     </div>
@@ -88,7 +88,7 @@
             <div class="pl-5 lg:pl-[15rem] flex flex-col gap-y-3 justify-center min-h-[calc(50vh)] sm:min-h-[calc(50vh)]">
                 <h1 class="playfair-display font-bold text-4xl md:text-6xl text-white drop-shadow-md">
                     <span class="block">
-                        Ajándék
+                        Látnivalók
                     </span>
                 </h1>
                 <p class="w-3/4 md:w-1/3 text-white">
@@ -97,70 +97,34 @@
             </div>
         </section>
 
-        <section class="w-full py-5 md:py-10 bg-gray-50">
-            <div class="px-5 md:px-0 md:w-2/3 mx-auto grid gap-6 grid-cols-1 md:grid-cols-3">
-                <div>
-                    <div class="flex flex-col gap-y-5">
-                        <div class="flex justify-center">
-                            <img src="manuel.jpg" alt="" class="w-full h-auto rounded-lg">
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <h2 class="text-2xl">
-                                Közvetlen foglalási ajánlat
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                            </p>
-                            <div>
-                                <a href="/extras/direct-booking.html" class="underline">
-                                    További információ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+        <section x-data="sights" class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
+                <template x-for="sight in sights">
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        <div>
+                            <div class="sticky top-[90px] md:pb-20">
+                                <h2 x-text="sight.name" class="text-2xl">
 
-                <div>
-                    <div class="flex flex-col gap-y-5">
-                        <div class="flex justify-center">
-                            <img src="manuel.jpg" alt="" class="w-full h-auto rounded-lg">
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <h2 class="text-2xl">
-                                Látnivalók
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                            </p>
-                            <div>
-                                <a href="/extras/sights.html" class="underline">
-                                    További információ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </h2>
+                                <p x-text="sight.description" class="pt-2 pb-4">
 
-                <div>
-                    <div class="flex flex-col gap-y-5">
-                        <div class="flex justify-center">
-                            <img src="manuel.jpg" alt="" class="w-full h-auto rounded-lg">
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <h2 class="text-2xl">
-                                Programajánlat
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                            </p>
-                            <div>
-                                <a href="/extras/guide.html" class="underline">
-                                    További információ
-                                </a>
+                                </p>
+                                <div>
+                                    <a target="_blank" x-bind:href="sight.link" class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        Továbbiak
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <div class="w-full">
+                            <img
+                                :src="sight.image"
+                                class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
+                            />
+                        </div>
                     </div>
-                </div>
+                </template>
             </div>
         </section>
 
@@ -202,7 +166,7 @@
         </section>
     </main>       
     
-<script type="module" src="every.js"></script>
-<script type="module" src="rooms.js"></script>
+    <script type="module" src="/every.js"></script>
+    <script type="module" src="/sights.js"></script>
 </body>
 </html>
