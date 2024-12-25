@@ -1,0 +1,81 @@
+---
+import NormalPageLayout from "../layouts/NormalPageLayout.astro";
+import Room from "../components/Room.astro";
+---
+<NormalPageLayout title="Szobáink" href="/rooms">
+    <Fragment slot="head">
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+        <script>
+            document.addEventListener("alpine:init", () => {        
+                Alpine.data("gallery", () => ({
+                    imageGalleryOpened: false,
+                    imageGalleryActiveUrl: null,
+
+                    imageGalleryOpen(el) {
+                        const imageElement = el.querySelector('img');
+
+                        this.imageGalleryActiveUrl = imageElement.src;
+                        this.imageGalleryOpened = true;
+                    },
+                    imageGalleryClose() {
+                        this.imageGalleryOpened = false;
+                        setTimeout(() => this.imageGalleryActiveUrl = null, 300);
+                    },
+                }))
+            })
+        </script>
+    </Fragment>
+
+    <span slot="title" class="block">
+        Szobáink
+    </span>
+    <span slot="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+    </span>
+
+    <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
+                <Room name="Zöld" folder="room-1">
+                    <Fragment slot="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                        </p>
+                    </Fragment>
+                </Room>
+
+                <Room name="Libafos" folder="room-2">
+                    <Fragment slot="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                        </p>
+                    </Fragment>
+                </Room>
+
+                <Room name="Családi 1" folder="room-3">
+                    <Fragment slot="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                        </p>
+                    </Fragment>
+                </Room>
+
+                <Room name="Családi 2" folder="room-4">
+                    <Fragment slot="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                        </p>
+                    </Fragment>
+                </Room>
+
+                <Room name="Teraszos" folder="room-5">
+                    <Fragment slot="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                        </p>
+                    </Fragment>
+                </Room>
+            </div>
+        </section>
+    </Fragment>
+</NormalPageLayout>

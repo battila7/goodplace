@@ -1,0 +1,61 @@
+---
+const pages = [
+  { title: 'Kezdőlap', href: '/' },
+  { title: 'Szobáink', href: '/rooms' },
+  { title: 'Ajándék', href: '/extras' },
+  { title: 'Rólunk', href: '/about-us' },
+]
+
+const { href } = Astro.props 
+
+const defaultLinkClasses = "py-2 px-3 lg:px-2.5 lg:px-2 w-full lg:w-auto flex items-center text-sm text-start font-medium text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100"
+const activeLinkClass = "bg-gray-100"
+---
+<header class="shadow-md fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 bg-white border-b border-gray-200">
+    <div class="max-w-[85rem] flex flex-wrap justify-between lg:grid lg:grid-cols-3 basis-full items-center w-full mx-auto py-2.5 px-4 sm:px-6 lg:px-8">
+        <div class="order-1 flex items-center gap-x-3">
+            <div class="hidden sm:block">
+                <!-- Logo -->
+                <a class="text-green-700 flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Good Place Apartman">
+                    <img src="/good-place-logo.png" alt="Good Place" class="w-40 h-auto mt-1">
+                </a>
+                <!-- End Logo -->
+            </div>
+            <div class="sm:hidden">
+                <a class="flex-none text-green-700 rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Good Place Apartman">
+                    <img src="/good-place-logo.png" alt="Good Place" class="w-28 h-auto mt-1">
+                </a>
+            </div>
+
+            <div class="lg:hidden">
+                <!-- Collapse Button Trigger -->
+                <button type="button" class="hs-collapse-toggle w-7 h-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50" id="hs-pro-dmh-collapse" aria-expanded="false" aria-controls="hs-pro-dmh" aria-label="Toggle navigation" data-hs-collapse="#hs-pro-dmh">
+                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                </button>
+                <!-- End Collapse Button Trigger -->
+            </div>
+        </div>
+
+        <div class="order-2 lg:order-3 flex justify-end items-center gap-x-2">
+            <a class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Foglalás
+            </a>
+        </div>
+
+        <div class="order-3 lg:order-2 basis-full grow lg:basis-auto lg:grow-0">
+        <div id="hs-pro-dmh" class="hs-collapse hidden overflow-hidden transition-all duration-300 lg:block" aria-labelledby="hs-pro-dmh-collapse">
+            <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
+            <div class="lg:flex lg:items-center lg:gap-x-2 lg:justify-center pt-2 lg:pt-0">
+                {pages.map((page) => (
+                    <div class="lg:inline-block border-t border-dashed border-gray-200 first:border-t-0 py-1 first:pt-0 last:pb-0 lg:border-0 lg:py-0">
+                        <a href={page.href} class:list={[defaultLinkClasses, { [activeLinkClass]: page.href == href}]}>
+                            {page.title}
+                        </a>
+                    </div>
+                ))}
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</header>
