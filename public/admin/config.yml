@@ -1,8 +1,11 @@
-local_backend: true
-
 backend:
   name: git-gateway
   branch: master
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
 
 # Location where files will be stored in the repo.
 media_folder: "src/assets/images"
