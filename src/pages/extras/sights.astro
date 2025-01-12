@@ -1,20 +1,14 @@
 ---
 import NormalPageLayout from "../../layouts/NormalPageLayout.astro";
+import Sight from "../../components/Sight.astro";
+import { getCollection, render } from 'astro:content';
 
-const sights = [
-    {
-      name: "Látnivaló 1",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius minima molestiae beatae natus voluptate vel facere aliquid harum! Facere vero deserunt rerum. Architecto error pariatur expedita beatae! Nam, minus rem!",
-      image: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-      link: "https://www.google.com"
-    },
-    {
-      name: "Látnivaló 2",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius minima molestiae beatae natus voluptate vel facere aliquid harum! Facere vero deserunt rerum. Architecto error pariatur expedita beatae! Nam, minus rem!",
-      image: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg",
-      link: "https://www.google.com"
-    }
-]
+const sightsCollection = await getCollection("sights");
+
+for (const sight of sightsCollection) {
+    sight.content = (await render(sight)).Content;
+    sight.data.image = import(`../../../${sight.data.image}`)
+}
 ---
 <NormalPageLayout title="Látnivalók" href="/extras">
     <span slot="title" class="block">
@@ -24,30 +18,10 @@ const sights = [
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
             <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
-                {sights.map(sight => (
-                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                        <div>
-                            <div class="sticky top-[90px] md:pb-20">
-                                <h2 class="text-2xl">
-                                    {sight.name}
-                                </h2>
-                                <p class="pt-2 pb-4">
-                                    {sight.description}
-                                </p>
-                                <div>
-                                    <a target="_blank" href={sight.link} class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                        Továbbiak
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full">
-                            <img
-                                src={sight.image}
-                                class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
-                            />
-                        </div>
-                    </div>
+                {sightsCollection.map(sight => (
+                    <Sight {...sight.data}>
+                        <sight.content />
+                    </Sight>
                 ))}
             </div>
         </section>

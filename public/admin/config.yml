@@ -1,0 +1,31 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: master
+
+# Location where files will be stored in the repo.
+media_folder: "src/assets/images"
+
+# The src attribute for uploaded media.
+public_folder: "src/assets/images"
+
+collections:
+- name: "sights"
+  label: "Látnivaló"
+  folder: "src/content/sights"
+  create: true
+  fields:
+    - label: "Név"
+      name: "title"
+      widget: "string"
+    - label: "Leírás"
+      name: "body"
+      widget: "markdown"
+    - label: "Kép"
+      name: "image"
+      widget: "image"
+      allow_multiple: false
+    - label: "Link"
+      name: "link"
+      widget: "string"
