@@ -1,5 +1,11 @@
 ---
+import Assets from '../util/assets'
 import Announcement from './Announcement.astro'
+import { Image } from 'astro:assets'
+
+import { logo as logoImage } from '../content/general/logo.json'
+
+const loadedLogoImage = Assets.getImage(logoImage)
 
 const pages = [
   { title: 'Kezdőlap', href: '/' },
@@ -21,13 +27,13 @@ const activeLinkClass = "bg-gray-100"
                 <div class="hidden sm:block">
                     <!-- Logo -->
                     <a class="text-green-700 flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Good Place Apartman">
-                        <img src="/good-place-logo.png" alt="Good Place" class="w-40 h-auto mt-1">
+                        <Image src={loadedLogoImage} alt="Good Place" class="w-40 h-auto mt-1">
                     </a>
                     <!-- End Logo -->
                 </div>
                 <div class="sm:hidden">
                     <a class="flex-none text-green-700 rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Good Place Apartman">
-                        <img src="/good-place-logo.png" alt="Good Place" class="w-28 h-auto mt-1">
+                        <Image src={loadedLogoImage} alt="Good Place" class="w-28 h-auto mt-1">
                     </a>
                 </div>
     

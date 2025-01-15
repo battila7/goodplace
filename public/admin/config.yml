@@ -19,6 +19,14 @@ collections:
 - name: "general"
   label: "Általános beállítások"
   files:
+    - label: "Logó"
+      name: "logo"
+      file: "src/content/general/logo.json"
+      fields:
+        - label: "Logó"
+          name: "image"
+          widget: "image"
+          choose_url: false
     - label: "Bejelentés legfelül"
       name: "announcement"
       file: "src/content/general/announcement.json"
