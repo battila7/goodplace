@@ -1,6 +1,12 @@
 ---
+import { marked } from "marked"
+
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
+
+import {greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
+
+const aboutTextContent = marked(aboutText)
 ---
 
 <!doctype html>
@@ -16,9 +22,6 @@ import Footer from "../components/Footer.astro"
 </head>
 <body>
 	<Header href="/"></Header>
-                <!-- ========== END HEADER ========== -->
-  
-              <!-- ========== MAIN CONTENT ========== -->
     <main id="content" class="">
         <div class="w-full h-[56px]">
                 
@@ -27,18 +30,9 @@ import Footer from "../components/Footer.astro"
         <section class="w-full bg-blend-multiply bg-gray-300 bg-[url('/apartman/main.jpg')] bg-cover">
             <!-- Card -->
             <div class="pl-5 lg:pl-[15rem] flex flex-col gap-y-3 justify-center min-h-[calc(80vh)] sm:min-h-[calc(80vh)]">
-                <h1 class="playfair-display font-bold text-4xl md:text-7xl text-white drop-shadow-md">
-                    <span class="block">
-                        Egy jó hely.
-                    </span>
-                    <span class="block">
-                        Neked.
-                    </span>
-                </h1>
+                <h1 class="whitespace-pre playfair-display font-bold text-4xl md:text-7xl text-white drop-shadow-md">{greetingTitle}</h1>
                 <p class="w-3/4 md:w-1/3 text-white">
-                    Nyírbátor legjobb szálláshelye vár Rád!
-                    Akár egy éjszakára, akár egy hétvégére.
-                    Wellness, kikapcsolódás és 22 kW-os töltő.
+                    {greetingSubtitle}
                 </p>
                 <div class="mt-5">
                     <a class="py-2 px-3 text-md font-semibold shadow-sm inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -52,28 +46,9 @@ import Footer from "../components/Footer.astro"
         <section class="w-full py-10 bg-gray-50 min-h-[50vh]">
             <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div class="flex flex-col justify-center">
-                    <h2 class="text-green-700 text-3xl md:text-4xl font-semibold playfair-display">
-                        <span class="block">
-                            Egy szálláshely,
-                        </span>
-                        <span class="block">
-                            ahol <span class="italic">jó</span> lenni.
-                        </span>
-                    </h2>
+                    <h2 class="whitespace-pre text-green-700 text-3xl md:text-4xl font-semibold playfair-display">{aboutTitle}</h2>
                 </div>
-                <div class="flex flex-col text-xl font-light justify-center text-gray-800 gap-y-5">
-                    <p>
-                        Good Place apartman várja látogatóit. Nyírbátor belvárosában a várostörténeti sétány közelében. Klimatizált teljes felszereltséggel (4K TV) rendelkező szobák, kényelmes ágyak, konyha (hűtő, mikró, indukciós fózőlap, edények, stb.).
-                    </p>
-                    <p>
-                        Az apartmanokhoz zuhanyozós fürdőszoba tartozik. Zárt parkoló kamerás megfigyeléssel, 2000m2 füves terület, minigolf, strandröplabdapálya, free wifi. Az apartmanok önellátóak, de változatos étkezési lehetőségek vannak 400-500 méteren belül (éttermek, pizzéria, büfé, kávézó, stb.) A Sárkány Wellness & Gyógyfürdő kocsival 5 perc távolságra. 
-                    </p>
-                    <p>
-                        Nagy figyelmet fordítottunk a megújuló energia hasznosítására. 22 kW-os Freecaharger autó tőltőnk van. kb 30 fő befogadására alkalmas zárt klimatizált teraszt.
-                    </p>
-                    <a class="underline">
-                        További információ
-                    </a>
+                <div set:html={aboutTextContent} class="flex flex-col text-xl font-light justify-center text-gray-800 gap-y-5">
                 </div>
             </div>
         </section>

@@ -16,6 +16,43 @@ media_folder: "src/assets/images"
 public_folder: "src/assets/images"
 
 collections:
+- name: "general"
+  label: "Általános beállítások"
+  files:
+    - label: "Bejelentés legfelül"
+      name: "announcement"
+      file: "src/content/general/announcement.json"
+      fields:
+        - label: "Jelenjen meg?"
+          name: "enabled"
+          widget: "boolean"
+        - label: "Szöveg"
+          name: "text"
+          widget: "text"
+        - label: "Link"
+          name: "link"
+          widget: "string"
+
+- name: "fixed-pages"
+  label: "Kötött oldalak"
+  files:
+    - label: "Kezdőlap"
+      name: "home"
+      file: "src/content/fixed-pages/home.json"
+      fields:
+        - label: "Üdvözlő cím"
+          name: "greetingTitle"
+          widget: "text"
+        - label: "Üdvözlő alcím"
+          name: "greetingSubtitle"
+          widget: "text"
+        - label: "Bemutatkozó cím"
+          name: "aboutTitle"
+          widget: "text"
+        - label: "Bemutatkozó szöveg"
+          name: "aboutText"
+          widget: "markdown"
+
 - name: "sights"
   label: "Látnivaló"
   folder: "src/content/sights"
@@ -34,6 +71,7 @@ collections:
     - label: "Link"
       name: "link"
       widget: "string"
+
 - name: "rooms"
   label: "Szoba"
   folder: "src/content/rooms"

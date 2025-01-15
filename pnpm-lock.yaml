@@ -23,6 +23,9 @@ importers:
       astro:
         specifier: ^5.1.1
         version: 5.1.1(jiti@2.4.2)(rollup@4.29.0)(typescript@5.7.2)(yaml@2.6.1)
+      marked:
+        specifier: ^15.0.6
+        version: 15.0.6
       preline:
         specifier: ^2.6.0
         version: 2.6.0
@@ -1323,6 +1326,11 @@ packages:
 
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
+
+  marked@15.0.6:
+    resolution: {integrity: sha512-Y07CUOE+HQXbVDCGl3LXggqJDbXDP2pArc2C1N1RRMN0ONiShoSsIInMd5Gsxupe7fKLpgimTV+HOJ9r7bA+pg==}
+    engines: {node: '>= 18'}
+    hasBin: true
 
   mdast-util-definitions@6.0.0:
     resolution: {integrity: sha512-scTllyX6pnYNZH/AIp/0ePz6s4cZtARxImwoPJ7kS42n+MnVsI4XbnG6d4ibehRIldYMWM2LD7ImQblVhUejVQ==}
@@ -3388,6 +3396,8 @@ snapshots:
       source-map-js: 1.2.1
 
   markdown-table@3.0.4: {}
+
+  marked@15.0.6: {}
 
   mdast-util-definitions@6.0.0:
     dependencies:
