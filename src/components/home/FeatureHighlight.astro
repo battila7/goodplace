@@ -1,0 +1,31 @@
+---
+import Assets from '../../util/assets'
+
+interface Feature {
+    title: string
+    icon: string
+    svg?: any
+}
+
+interface Props {
+    features: Feature[]
+}
+
+const { features } = Astro.props
+
+for (const feature of features) {
+    feature.svg = await Assets.getSvg(feature.icon)
+}
+---
+
+<section class="w-full py-10 bg-gray-50">
+    
+    <div class="px-5 md:px-0 md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
+        {features.map(feature => (
+            <div>
+                {feature.title}
+            </div>
+            <Fragment set:html={feature.svg} />
+        ))}    
+    </div>
+</section>
