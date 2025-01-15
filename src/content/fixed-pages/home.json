@@ -6,7 +6,18 @@
   "featureHighlight": [
     {
         "title": "Kényelmes ágyak",
+        "description": "Lorem ipsum dolor sit amet.",
         "icon": "src/assets/images/bed.svg"
+    },
+    {
+      "title": "Kényelmes ágyak",
+      "description": "Lorem ipsum dolor sit amet.",
+      "icon": "src/assets/images/bed.svg"
+    },
+    {
+      "title": "Kényelmes ágyak",
+      "description": "Lorem ipsum dolor sit amet.",
+      "icon": "src/assets/images/bed.svg"
     }
   ],
   "imageFeatures": [
