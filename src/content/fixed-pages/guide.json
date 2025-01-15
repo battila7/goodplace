@@ -1,3 +1,5 @@
 {
-    "coverImage": "src/assets/images/manuel.jpg"
+    "coverImage": "src/assets/images/manuel.jpg",
+    "subtitle": "Lorem ipsum dolor sit amet.",
+    "content": ""
 }

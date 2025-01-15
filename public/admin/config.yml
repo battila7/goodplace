@@ -145,15 +145,24 @@ collections:
       name: "direct-booking"
       file: "src/content/fixed-pages/direct-booking.json"
       fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
         - label: "Borítókép"
           name: "coverImage"
           widget: "image"
           choose_url: false
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
     
     - label: "Látnivalók"
-      name: "direct-booking"
+      name: "sights"
       file: "src/content/fixed-pages/sights.json"
       fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
         - label: "Borítókép"
           name: "coverImage"
           widget: "image"
@@ -163,10 +172,16 @@ collections:
       name: "guide"
       file: "src/content/fixed-pages/guide.json"
       fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
         - label: "Borítókép"
           name: "coverImage"
           widget: "image"
           choose_url: false
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
 
 - name: "sights"
   label: "Látnivaló"

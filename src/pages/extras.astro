@@ -3,14 +3,13 @@ import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Assets from "../util/assets";
 import Image from "astro/components/Image.astro";
 
-import { coverImage as directBookingCover } from '../content/fixed-pages/direct-booking.json';
-import { coverImage as guideCover } from '../content/fixed-pages/guide.json';
-import { coverImage as sightsCover } from '../content/fixed-pages/sights.json';
+import directBooking from '../content/fixed-pages/direct-booking.json';
+import guide from '../content/fixed-pages/guide.json';
+import sights from '../content/fixed-pages/sights.json';
 
-const loadedDirectBookingCover = Assets.getImage(directBookingCover);
-const loadedGuideCover = Assets.getImage(guideCover);
-const loadedSightsCover = Assets.getImage(sightsCover);
-
+const loadedDirectBookingCover = Assets.getImage(directBooking.coverImage);
+const loadedGuideCover = Assets.getImage(guide.coverImage);
+const loadedSightsCover = Assets.getImage(sights.coverImage);
 ---
 <NormalPageLayout title="Extras" href="/extras">
     <span slot="title" class="block">
@@ -30,7 +29,7 @@ const loadedSightsCover = Assets.getImage(sightsCover);
                                 Közvetlen foglalási ajánlat
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                                {directBooking.subtitle}    
                             </p>
                             <div>
                                 <a href="/extras/direct-booking" class="underline">
@@ -44,14 +43,14 @@ const loadedSightsCover = Assets.getImage(sightsCover);
                 <div>
                     <div class="flex flex-col gap-y-5">
                         <div class="flex justify-center">
-                            <Image src={loadedDirectBookingCover} alt="" class="w-full h-auto rounded-lg">
+                            <Image src={loadedSightsCover} alt="" class="w-full h-auto rounded-lg">
                         </div>
                         <div class="flex flex-col gap-y-2">
                             <h2 class="text-2xl">
                                 Látnivalók
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                                {sights.subtitle}    
                             </p>
                             <div>
                                 <a href="/extras/sights" class="underline">
@@ -65,14 +64,14 @@ const loadedSightsCover = Assets.getImage(sightsCover);
                 <div>
                     <div class="flex flex-col gap-y-5">
                         <div class="flex justify-center">
-                            <Image src={loadedDirectBookingCover} alt="" class="w-full h-auto rounded-lg">
+                            <Image src={loadedGuideCover} alt="" class="w-full h-auto rounded-lg">
                         </div>
                         <div class="flex flex-col gap-y-2">
                             <h2 class="text-2xl">
                                 Programajánlat
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+                                {guide.subtitle}    
                             </p>
                             <div>
                                 <a href="/extras/guide" class="underline">
