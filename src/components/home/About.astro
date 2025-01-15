@@ -1,18 +1,18 @@
 ---
 interface Props {
-    aboutTitle: string
-    aboutTextContent: string
+    title: string
+    content: string
 }
 
-const { aboutTitle, aboutTextContent } = Astro.props
+const { title, content } = Astro.props
 ---
 
 <section class="w-full py-10 bg-gray-50 min-h-[50vh]">
     <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
         <div class="flex flex-col justify-center">
-            <h2 class="whitespace-pre text-green-700 text-3xl md:text-4xl font-semibold playfair-display">{aboutTitle}</h2>
+            <h2 class="whitespace-pre text-green-700 text-3xl md:text-4xl font-semibold playfair-display">{title}</h2>
         </div>
-        <div set:html={aboutTextContent} class="flex flex-col text-xl font-light justify-center text-gray-800 gap-y-5">
+        <div set:html={content} class="flex flex-col text-xl font-light justify-center text-gray-800 gap-y-5">
         </div>
     </div>
 </section>

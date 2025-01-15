@@ -5,9 +5,11 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Hero from '../components/home/Hero.astro'
 import About from "../components/home/About.astro"
+import FeatureHighlight from "../components/home/FeatureHighlight.astro"
+import ImageFeatures from "../components/home/ImageFeatures.astro"
+import AllFeatures from "../components/home/AllFeatures.astro"
 
 import {featureHighlight, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
-import FeatureHighlight from "../components/home/FeatureHighlight.astro"
 
 const aboutTextContent = marked(aboutText)
 ---
@@ -24,174 +26,21 @@ const aboutTextContent = marked(aboutText)
     <script>import "preline/dist/preline.js";</script>
 </head>
 <body>
-	<Header href="/"></Header>
+	<Header href="/" />
     <main id="content" class="">
-        <div class="w-full h-[56px]">
-                
-        </div>
+        <div class="w-full h-[56px]"></div>
 
-        <Hero greetingTitle={greetingTitle} greetingSubtitle={greetingSubtitle}></Hero>
+        <Hero title={greetingTitle} subtitle={greetingSubtitle} />
 
-        <FeatureHighlight features={featureHighlight}></FeatureHighlight>
+        <FeatureHighlight features={featureHighlight} />
 
-        <About aboutTitle={aboutTitle} aboutTextContent={aboutTextContent}></About>
+        <About title={aboutTitle} content={aboutTextContent} />
         
-        <section class="w-full py-10 bg-gray-50 min-h-[50vh]">
-            <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto">
-                <h2 class="w-full md:text-center text-green-700 text-3xl md:text-4xl font-semibold playfair-display">
-                    Ezeket csak nálunk találod
-                </h2>
-                <div class="flex flex-col gap-y-5">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="order-1 flex flex-col gap-y-2 justify-center">
-                            <h3 class="text-2xl md:text-3xl text-stone-600">
-                                Bekészítés
-                            </h3>
-                            <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                                </p>
-                            </div>
-                        </div>
-                        <div class="order-0 md:order-2 h-[50vh] flex flex-col items-center justify-center">
-                            <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                                <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="order-2 flex flex-col gap-y-2 justify-center">
-                            <h3 class="text-2xl md:text-3xl text-stone-600">
-                                Környezetbarát megoldások
-                            </h3>
-                            <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                                </p>
-                            </div>
-                        </div>
-                        <div class="h-[50vh] flex flex-col items-center justify-center">
-                            <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                                <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="order-1 flex flex-col gap-y-2 justify-center">
-                            <h3 class="text-2xl md:text-3xl text-stone-600">
-                                Élmények
-                            </h3>
-                            <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                                </p>
-                            </div>
-                        </div>
-                        <div class="order-0 md:order-2 h-[50vh] flex flex-col items-center justify-center">
-                            <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                                <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <ImageFeatures />
         
-        <section class="w-full py-10 bg-gray-50 min-h-[50vh]">
-            <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-2">
-                <div class="flex flex-col justify-center">
-                    <h2 class="text-green-700 text-3xl md:text-4xl font-semibold playfair-display">
-                        <span class="block">
-                            Csak megérkezned kell,
-                        </span>
-                        <span class="block">
-                            minden másról
-                        </span>
-                        <span class="block">
-                            mi gondoskodunk.
-                        </span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-2 gap-x-5 gap-y-5">
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"
-                                class="shrink-0 size-10 lucide lucide-bed-double"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                Kényelmes ágyak
-                            </h3>
-                        </div>
-                    </div>
+        <AllFeatures />
 
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"
-                                class="shrink-0 size-10 lucide lucide-cooking-pot"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/><path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></svg>    
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                Felszerelt konyha
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"
-                                class="shrink-0 size-10 lucide lucide-land-plot"><path d="m12 8 6-3-6-3v10"/><path d="m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12"/><path d="m6.49 12.85 11.02 6.3"/><path d="M17.51 12.85 6.5 19.15"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                Kikapcsolódási lehetőségek
-                            </h3>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-10 lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                22 kW-os elektromos autó töltő
-                            </h3>
-                        </div>
-                    </div>
-
-                    
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-10 lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                SZÉP-kártyás fizetés
-                            </h3>
-                        </div>
-                    </div>
-
-                    
-                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
-                        <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
-                            <div class="text-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-10 lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-                            </div>
-                            <h3 class="text-center text-lg md:text-xl text-gray-800">
-                                Hosszú és rövid távú foglalás
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-		<Footer></Footer>
+		<Footer />
     </main>       
 </body>
 </html>
