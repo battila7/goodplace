@@ -1,6 +1,9 @@
 ---
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Room from "../components/Room.astro";
+import { getCollection } from "astro:content";
+
+const roomsCollection = await getCollection("rooms");
 ---
 <NormalPageLayout title="Szobáink" href="/rooms">
     <Fragment slot="head">
@@ -36,45 +39,10 @@ import Room from "../components/Room.astro";
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
             <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
-                <Room name="Zöld" folder="room-1">
-                    <Fragment slot="description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                        </p>
-                    </Fragment>
-                </Room>
-
-                <Room name="Világos" folder="room-2">
-                    <Fragment slot="description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                        </p>
-                    </Fragment>
-                </Room>
-
-                <Room name="Családi 1" folder="room-3">
-                    <Fragment slot="description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                        </p>
-                    </Fragment>
-                </Room>
-
-                <Room name="Családi 2" folder="room-4">
-                    <Fragment slot="description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                        </p>
-                    </Fragment>
-                </Room>
-
-                <Room name="Teraszos" folder="room-5">
-                    <Fragment slot="description">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
-                        </p>
-                    </Fragment>
-                </Room>
+                {roomsCollection.map(room => (
+                    <Room collectionEntry={room}>
+                    </Room>
+                ))}
             </div>
         </section>
     </Fragment>

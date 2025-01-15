@@ -1,19 +1,14 @@
 ---
-import path from 'node:path'
-
 import NormalPageLayout from "../../layouts/NormalPageLayout.astro";
 import Sight from "../../components/Sight.astro";
 import { getCollection, render } from 'astro:content';
-import { getImage } from 'astro:assets';
-import type { ImageMetadata } from "astro"
+import Assets from '../../util/assets';
 
 const sightsCollection = await getCollection("sights");
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif}');
-
 for (const sight of sightsCollection) {
     sight.content = (await render(sight)).Content;
-    sight.data.image = images["/" + sight.data.image]();
+    sight.data.image = Assets.getImage(sight.data.image);
 }
 ---
 <NormalPageLayout title="Látnivalók" href="/extras">

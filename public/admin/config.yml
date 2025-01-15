@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: master
@@ -32,3 +34,21 @@ collections:
     - label: "Link"
       name: "link"
       widget: "string"
+- name: "rooms"
+  label: "Szoba"
+  folder: "src/content/rooms"
+  create: true
+  fields:
+    - label: "Név"
+      name: "title"
+      widget: "string"
+    - label: "Leírás"
+      name: "body"
+      widget: "markdown"
+    - label: "Kép"
+      name: "gallery"
+      widget: "list"
+      field: 
+        label: "Kép"
+        name: "image"
+        widget: "image"

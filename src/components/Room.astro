@@ -1,15 +1,21 @@
 ---
-import * as fs from 'fs'
+import { Picture } from "astro:assets"
+import { render } from "astro:content"
+import Assets from "../util/assets"
 
-const { name, folder } = Astro.props
+const { collectionEntry } = Astro.props
 
-const images = fs.readdirSync(`./public/rooms/${folder}`).filter(file => {
-    return file.endsWith('.jpg')
+const content = await render(collectionEntry)
+
+const images = collectionEntry.data.gallery.map(image => {
+    return Assets.getImage(image)
 })
 
-const imageColumns = chunks(images.map(image => {
-    return `/rooms/${folder}/${image}`
-}), 3)
+for (const image of images) {
+    await image;
+}
+
+const imageColumns = chunks(images, 3)
 
 function chunks(array, chunkCount) {
     const results = []
@@ -19,7 +25,7 @@ function chunks(array, chunkCount) {
 
     let counter = 0;
     while (array.length) {
-        results[counter % chunkCount].push(array.splice(0, 1))
+        results[counter % chunkCount].push(array.shift())
         counter++
     }
     return results
@@ -29,10 +35,10 @@ function chunks(array, chunkCount) {
     <div>
         <div class="sticky top-[90px] md:pb-20">
             <h2 class="text-2xl">
-                {name}
+                {collectionEntry.data.title}
             </h2>
             <div class="pt-2">
-                <slot name="description"></slot>
+                <content.Content />
             </div>
         </div>
     </div>
@@ -42,8 +48,10 @@ function chunks(array, chunkCount) {
                 <div class="grid content-start gap-2 md:gap-4">
                     {imageColumn.map(image => (
                         <div x-on:click="imageGalleryOpen($el)" class="tile relative overflow-hidden group cursor-zoom-in">
-                            <img
+                            <Picture
                                 src={image}
+                                formats={["webp"]},
+                                alt={collectionEntry.data.title},
                                 class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
                             />
                             <div class="rounded-lg absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-75"></div>
@@ -76,3 +84,4 @@ function chunks(array, chunkCount) {
         </template>
     </div>
 </div>
+ -->
