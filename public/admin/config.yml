@@ -141,6 +141,32 @@ collections:
               widget: "image"
               choose_url: false
 
+    - label: "Közvetlen foglalási ajánlat"
+      name: "direct-booking"
+      file: "src/content/fixed-pages/direct-booking.json"
+      fields:
+        - label: "Borítókép"
+          name: "coverImage"
+          widget: "image"
+          choose_url: false
+    
+    - label: "Látnivalók"
+      name: "direct-booking"
+      file: "src/content/fixed-pages/sights.json"
+      fields:
+        - label: "Borítókép"
+          name: "coverImage"
+          widget: "image"
+          choose_url: false
+
+    - label: "Programajánlat"
+      name: "guide"
+      file: "src/content/fixed-pages/guide.json"
+      fields:
+        - label: "Borítókép"
+          name: "coverImage"
+          widget: "image"
+          choose_url: false
 
 - name: "sights"
   label: "Látnivaló"
