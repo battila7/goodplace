@@ -183,6 +183,17 @@ collections:
           name: "content"
           widget: "markdown"
 
+    - label: "Rólunk"
+      name: "about"
+      file: "src/content/fixed-pages/about.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
+
 - name: "sights"
   label: "Látnivaló"
   folder: "src/content/sights"
