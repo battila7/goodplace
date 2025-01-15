@@ -1,15 +1,9 @@
 ---
 import NormalPageLayout from "../../layouts/NormalPageLayout.astro";
 import Sight from "../../components/Sight.astro";
-import { getCollection, render } from 'astro:content';
-import Assets from '../../util/assets';
+import { getCollection } from 'astro:content';
 
 const sightsCollection = await getCollection("sights");
-
-for (const sight of sightsCollection) {
-    sight.content = (await render(sight)).Content;
-    sight.data.image = Assets.getImage(sight.data.image);
-}
 ---
 <NormalPageLayout title="Látnivalók" href="/extras">
     <span slot="title" class="block">
@@ -20,8 +14,7 @@ for (const sight of sightsCollection) {
         <section class="w-full py-5 md:py-10 bg-gray-50">
             <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
                 {sightsCollection.map(sight => (
-                    <Sight {...sight.data}>
-                        <sight.content />
+                    <Sight collectionEntry={sight}>
                     </Sight>
                 ))}
             </div>

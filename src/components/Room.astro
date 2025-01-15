@@ -2,34 +2,21 @@
 import { Picture } from "astro:assets"
 import { render } from "astro:content"
 import Assets from "../util/assets"
+import { chunks } from "../util/arrays"
+
+const IMAGE_COLUMNS = 3
 
 const { collectionEntry } = Astro.props
 
-const content = await render(collectionEntry)
+const { Content } = await render(collectionEntry)
 
-const images = collectionEntry.data.gallery.map(image => {
-    return Assets.getImage(image)
-})
+const images = collectionEntry.data.gallery.map(image => Assets.getImage(image))
 
 for (const image of images) {
     await image;
 }
 
-const imageColumns = chunks(images, 3)
-
-function chunks(array, chunkCount) {
-    const results = []
-    for (let i = 0; i < chunkCount; i++) {
-        results.push([])
-    }
-
-    let counter = 0;
-    while (array.length) {
-        results[counter % chunkCount].push(array.shift())
-        counter++
-    }
-    return results
-}
+const imageColumns = chunks(images, IMAGE_COLUMNS)
 ---
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     <div>
@@ -38,7 +25,7 @@ function chunks(array, chunkCount) {
                 {collectionEntry.data.title}
             </h2>
             <div class="pt-2">
-                <content.Content />
+                <Content />
             </div>
         </div>
     </div>
