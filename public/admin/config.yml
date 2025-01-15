@@ -51,6 +51,14 @@ collections:
         - label: "Instagram"
           name: "instagram"
           widget: "string"
+    - label: "SZÉP Kártya"
+      name: "pretty"
+      file: "src/content/general/pretty.json"
+      fields:
+        - label: "Elfogadóhely kép"
+          name: "image"
+          widget: "image"
+          choose_url: false
 
 - name: "fixed-pages"
   label: "Kötött oldalak"

@@ -1,5 +1,11 @@
 ---
+import { Image } from 'astro:assets'
+import Assets from '../util/assets'
+
 import { address, phone, email, facebook, instagram } from '../content/general/contact.json'
+import { image as prettyImage } from '../content/general/pretty.json'
+
+const loadedPrettyImage = Assets.getImage(prettyImage)
 ---
 
 <section class="w-full py-10 bg-stone-600 min-h-[50vh]">
@@ -30,7 +36,7 @@ import { address, phone, email, facebook, instagram } from '../content/general/c
                     </a>
                 </div>
                 <div>
-                    <img class="shadow-md rounded-lg w-2/3" src="/szepkartya.png">
+                    <Image src={loadedPrettyImage} alt="Szép kártya elfogadóhely" class="shadow-md rounded-lg w-2/3">
                 </div>
             </div>
             <div>
