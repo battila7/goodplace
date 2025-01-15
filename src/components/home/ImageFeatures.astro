@@ -1,4 +1,42 @@
 ---
+import { marked } from 'marked'
+
+import Picture from 'astro/components/Picture.astro'
+
+import Assets from '../../util/assets'
+
+interface Feature {
+    title: string
+    content: string
+    image: string
+    imageSide: string
+    loadedImage?: any
+    renderedContent?: any
+    imageSideClasses?: any
+}
+
+interface Props {
+    features: Feature[]
+}
+
+const { features } = Astro.props
+
+const imageSideClasses: any = {
+    right: {
+        text: "order-1 flex flex-col gap-y-2 justify-center",
+        image: "order-0 md:order-2 h-[50vh] flex flex-col items-center justify-center"
+    },
+    left: {
+        text: "order-2 flex flex-col gap-y-2 justify-center",
+        image: "h-[50vh] flex flex-col items-center justify-center"
+    }
+}
+
+for (const feature of features) {
+    feature.loadedImage = Assets.getImage(feature.image)
+    feature.renderedContent = marked(feature.content)
+    feature.imageSideClasses = imageSideClasses[feature.imageSide]
+}
 ---
 <section class="w-full py-10 bg-gray-50 min-h-[50vh]">
     <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto">
@@ -6,59 +44,23 @@
             Ezeket csak nálunk találod
         </h2>
         <div class="flex flex-col gap-y-5">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="order-1 flex flex-col gap-y-2 justify-center">
-                    <h3 class="text-2xl md:text-3xl text-stone-600">
-                        Bekészítés
-                    </h3>
-                    <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                        </p>
+            {features.map(feature => (
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class={feature.imageSideClasses.text}>
+                        <h3 class="text-2xl md:text-3xl text-stone-600">
+                            {feature.title}
+                        </h3>
+                        <div set:html={feature.renderedContent} class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
+                            
+                        </div>
+                    </div>
+                    <div class={feature.imageSideClasses.image}>
+                        <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
+                            <Picture formats={['webp']} src={feature.loadedImage} alt={feature.title} class="w-full h-full rounded-lg shadow-lg object-cover">
+                        </div>
                     </div>
                 </div>
-                <div class="order-0 md:order-2 h-[50vh] flex flex-col items-center justify-center">
-                    <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                        <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="order-2 flex flex-col gap-y-2 justify-center">
-                    <h3 class="text-2xl md:text-3xl text-stone-600">
-                        Környezetbarát megoldások
-                    </h3>
-                    <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                        </p>
-                    </div>
-                </div>
-                <div class="h-[50vh] flex flex-col items-center justify-center">
-                    <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                        <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="order-1 flex flex-col gap-y-2 justify-center">
-                    <h3 class="text-2xl md:text-3xl text-stone-600">
-                        Élmények
-                    </h3>
-                    <div class="w-full md:w-3/4 text-xl font-light text-gray-800 flex flex-col gap-y-5">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam
-                        </p>
-                    </div>
-                </div>
-                <div class="order-0 md:order-2 h-[50vh] flex flex-col items-center justify-center">
-                    <div class="w-5/6 h-5/6 rounded-lg border border-gray-300">
-                        <img src="/manuel.jpg" alt="Bekészítés" class="w-full h-full rounded-lg shadow-lg object-cover">
-                    </div>
-                </div>
-            </div>
+            ))}
         </div>
     </div>
 </section>

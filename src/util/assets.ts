@@ -8,10 +8,14 @@ const Assets = {
     getImage(relativePath: string) {
         return decapImages["/" + relativePath]()
     },
-    async getSvg(relativePath: string) {
+    async getSvg(relativePath: string, options = { addClasses: "", strokeWidth: 2 }) {
         const value = await decapSvgs["/" + relativePath]()
 
-        return value.default
+        let svg = value.default
+        svg = svg.replace("class=\"", `class="${options.addClasses} `)
+        svg = svg.replace("stroke-width=\"2\"", `stroke-width="${options.strokeWidth}"`)
+
+        return svg
     }
 }
 

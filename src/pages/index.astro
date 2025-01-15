@@ -7,9 +7,9 @@ import Hero from '../components/home/Hero.astro'
 import About from "../components/home/About.astro"
 import FeatureHighlight from "../components/home/FeatureHighlight.astro"
 import ImageFeatures from "../components/home/ImageFeatures.astro"
-import AllFeatures from "../components/home/AllFeatures.astro"
+import TileFeatures from "../components/home/TileFeatures.astro"
 
-import {featureHighlight, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
+import {tileFeatures, imageFeatures, featureHighlight, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
 
 const aboutTextContent = marked(aboutText)
 ---
@@ -36,9 +36,9 @@ const aboutTextContent = marked(aboutText)
 
         <About title={aboutTitle} content={aboutTextContent} />
         
-        <ImageFeatures />
+        <ImageFeatures features={imageFeatures}/>
         
-        <AllFeatures />
+        <TileFeatures features={tileFeatures}/>
 
 		<Footer />
     </main>       

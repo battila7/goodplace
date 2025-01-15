@@ -1,0 +1,52 @@
+---
+import Assets from '../../util/assets'
+
+interface Feature {
+    title: string
+    icon: string
+    iconSvg?: string
+}
+
+interface Props {
+    features: Feature[]
+}
+
+const { features } = Astro.props
+
+for (const feature of features) {
+    feature.iconSvg = await Assets.getSvg(feature.icon, {
+        addClasses: 'size-10 shrink-0',
+        strokeWidth: 1,
+    })
+}
+---
+<section class="w-full py-10 bg-gray-50 min-h-[50vh]">
+    <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-2">
+        <div class="flex flex-col justify-center">
+            <h2 class="text-green-700 text-3xl md:text-4xl font-semibold playfair-display">
+                <span class="block">
+                    Csak megérkezned kell,
+                </span>
+                <span class="block">
+                    minden másról
+                </span>
+                <span class="block">
+                    mi gondoskodunk.
+                </span>
+            </h2>
+        </div>
+        <div class="grid grid-cols-2 gap-x-5 gap-y-5">
+            {features.map(feature => (
+                <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
+                    <div class="p-4 h-full w-full flex flex-col gap-y-2 items-center justify-center">
+                        <div set:html={feature.iconSvg} class="text-green-700">
+                        </div>
+                        <h3 class="text-center text-lg md:text-xl text-gray-800">
+                            {feature.title}
+                        </h3>
+                    </div>
+                </div>    
+            ))}
+        </div>
+    </div>
+</section>

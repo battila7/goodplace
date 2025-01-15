@@ -8,5 +8,31 @@
         "title": "Kényelmes ágyak",
         "icon": "src/assets/images/bed.svg"
     }
+  ],
+  "imageFeatures": [
+    {
+        "title": "Bekészítés",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam.",
+        "image": "src/assets/images/room-1-1.jpg",
+        "imageSide": "right"
+    }
+  ],
+  "tileFeatures": [
+    {
+      "title": "Kényelmes ágyak",
+      "icon": "src/assets/images/bed.svg"
+    },
+    {
+      "title": "Felszerelt konyha",
+      "icon": "src/assets/images/bed.svg"
+    },
+    {
+      "title": "Kikapcsolódási lehetőségek",
+      "icon": "src/assets/images/bed.svg"
+    },
+    {
+      "title": "22 kW-os elektromos autó töltő",
+      "icon": "src/assets/images/bed.svg"
+    }
   ]
 }
