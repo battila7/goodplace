@@ -52,6 +52,60 @@ collections:
         - label: "Bemutatkozó szöveg"
           name: "aboutText"
           widget: "markdown"
+        - label: "Kiemelt szolgáltatás"
+          name: "featureHighlight"
+          widget: "list"
+          min: 3
+          max: 3
+          allow_add: false
+          fields:
+            - label: "Név"
+              name: "title"
+              widget: "string"
+            - label: "Leírás"
+              name: "description"
+              widget: "string"
+            - label: "Kép"
+              name: "icon"
+              widget: "image"
+              choose_url: false
+        - label: "Képes szolgáltatás"
+          name: "imageFeatures"
+          widget: "list"
+          min: 1
+          fields:
+            - label: "Név"
+              name: "title"
+              widget: "string"
+            - label: "Leírás"
+              name: "content"
+              widget: "markdown"
+            - label: "Image"
+              name: "image"
+              widget: "image"
+              choose_url: false
+            - label: "A kép melyik oldalon jelenjen meg?"
+              name: "imageSide"
+              widget: "select"
+              default: "right"
+              options:
+                - label: "Bal"
+                  value: "left"
+                - label: "Jobb"
+                  value: "right"
+        - label: "Csempés szolgáltatás"
+          name: "tileFeatures"
+          widget: "list"
+          min: 1
+          fields:
+            - label: "Név"
+              name: "title"
+              widget: "string"
+            - label: "Kép"
+              name: "icon"
+              widget: "image"
+              choose_url: false
+
 
 - name: "sights"
   label: "Látnivaló"
