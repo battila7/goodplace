@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: master
@@ -191,6 +193,49 @@ collections:
         - label: "Tartalom"
           name: "content"
           widget: "markdown"
+
+- name: "services"
+  label: "Szolgáltatás"
+  folder: "src/content/services"
+  create: true
+  fields:
+    - label: "Név"
+      name: "title"
+      widget: "string"
+    - label: "Leírás"
+      name: "body"
+      widget: "markdown"
+    - label: "Kiemelt szolgáltatás? (Azaz, megjelenjen a nyitókép alatt?)"
+      name: "highlight"
+      widget: "boolean"
+      default: false
+    - label: "Ikon"
+      name: "icon"
+      widget: "image"
+      allow_multiple: false
+      choose_url: false
+    - label: "Tartalom"
+      name: "body"
+      widget: "markdown"
+
+- name: "additional-pages"
+  label: "További oldal"
+  folder: "src/content/additional-pages"
+  create: true
+  fields:
+    - label: "Cím"
+      name: "title"
+      widget: "text"
+    - label: "Alcím"
+      name: "subtitle"
+      widget: "string"
+    - label: "Borítókép"
+      name: "coverImage"
+      widget: "image"
+      choose_url: false
+    - label: "Tartalom"
+      name: "body"
+      widget: "markdown"
 
 - name: "sights"
   label: "Látnivaló"

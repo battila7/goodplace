@@ -1,8 +1,14 @@
 ---
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import { Image } from 'astro:assets'
+import Assets from '../util/assets'
 
-const { title, href } = Astro.props
+const { title, href, coverImage } = Astro.props
+
+console.log(coverImage)
+
+const loadedCoverImage = coverImage && Assets.getImage(coverImage)
 ---
 <!doctype html>
 <html>
@@ -23,8 +29,13 @@ const { title, href } = Astro.props
         <div class="w-full h-[56px]">
                 
         </div>
-        <section class="w-full bg-blend-multiply flex flex-col justify-center bg-green-700">
-            <div class="pl-5 lg:pl-[15rem] flex flex-col gap-y-3 justify-center min-h-[calc(50vh)] sm:min-h-[calc(50vh)]">
+        <section class="w-full relative flex flex-col justify-center bg-green-700">
+            {loadedCoverImage && <Image
+                src={loadedCoverImage}
+                alt={title}
+                class="absolute z-0 top-0 left-0 w-full h-full object-cover"
+            />}
+            <div class="relative top-0 left-0 z-10 pl-5 lg:pl-[15rem] flex flex-col gap-y-3 justify-center min-h-[calc(50vh)] sm:min-h-[calc(50vh)]">
                 <h1 class="playfair-display font-bold text-4xl md:text-6xl text-white drop-shadow-md">
                     <slot name="title"></slot>
                 </h1>

@@ -1,0 +1,37 @@
+---
+import CoverImagePageLayout from "../../layouts/CoverImagePageLayout.astro";
+
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+
+export const getStaticPaths = (async () => {
+    const additionalPages = await getCollection("additionalPages");
+
+    return additionalPages.map((page) => ({
+        params: {
+            id: page.id,
+        },
+        props: {
+            page
+        }
+    }))
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const { Content } = await render(page)
+---
+<CoverImagePageLayout title={page.data.title} coverImage={page.data.coverImage} href="/">
+    <span class="whitespace-pre" slot="title">{page.data.title}</span>
+    <span slot="description">
+        {page.data.subtitle}
+    </span>
+
+    <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="px-5 md:px-0 md:w-2/3 mx-auto">
+                <Content />
+            </div>
+        </section>
+    </Fragment>
+</CoverImagePageLayout>

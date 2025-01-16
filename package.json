@@ -13,7 +13,7 @@
     "@astrojs/tailwind": "^5.1.4",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.8",
-    "astro": "^5.1.1",
+    "astro": "^5.1.7",
     "astro-lucide": "^0.0.3",
     "marked": "^15.0.6",
     "preline": "^2.6.0",
