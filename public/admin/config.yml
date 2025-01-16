@@ -25,6 +25,16 @@ collections:
           name: "image"
           widget: "image"
           choose_url: false
+    - label: "Jogi szövegek"
+      name: "legal"
+      file: "src/content/general/legal.json"
+      fields:
+        - label: "Adatvédelmi szabályzat"
+          name: "privacy"
+          widget: "markdown"
+        - label: "Általános szerződési feltételek"
+          name: "terms"
+          widget: "markdown"
     - label: "Bejelentés legfelül"
       name: "announcement"
       file: "src/content/general/announcement.json"
