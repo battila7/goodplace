@@ -6,8 +6,6 @@ import Assets from '../util/assets'
 
 const { title, href, coverImage } = Astro.props
 
-console.log(coverImage)
-
 const loadedCoverImage = coverImage && Assets.getImage(coverImage)
 ---
 <!doctype html>

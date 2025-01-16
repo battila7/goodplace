@@ -1,0 +1,59 @@
+---
+import IconPageLayout from "../../layouts/IconPageLayout.astro";
+
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Service from "../../components/Service.astro";
+
+export const getStaticPaths = (async () => {
+    const services = await getCollection("services");
+
+    return services.map((service) => ({
+        params: {
+            id: service.id,
+        },
+        props: {
+            service
+        }
+    }))
+}) satisfies GetStaticPaths;
+
+const { service } = Astro.props;
+---
+<IconPageLayout title={service.data.title} icon={service.data.icon} href="/">
+    <Fragment slot="head">
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+        <script>
+            document.addEventListener("alpine:init", () => {        
+                Alpine.data("gallery", () => ({
+                    imageGalleryOpened: false,
+                    imageGalleryActiveUrl: null,
+
+                    imageGalleryOpen(el) {
+                        const imageElement = el.querySelector('img');
+
+                        this.imageGalleryActiveUrl = imageElement.src;
+                        this.imageGalleryOpened = true;
+                    },
+                    imageGalleryClose() {
+                        this.imageGalleryOpened = false;
+                        setTimeout(() => this.imageGalleryActiveUrl = null, 300);
+                    },
+                }))
+            })
+        </script>
+    </Fragment>
+
+    <span class="whitespace-pre" slot="title">{service.data.title}</span>
+    <span slot="description">
+        {service.data.subtitle}
+    </span>
+
+    <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="px-5 md:px-0 md:w-2/3 mx-auto">
+                <Service collectionEntry={service} />
+            </div>
+        </section>
+    </Fragment>
+</IconPageLayout>

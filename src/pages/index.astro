@@ -1,17 +1,24 @@
 ---
-import { marked } from "marked"
+import Markdown from "../util/markdown"
 
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Hero from '../components/home/Hero.astro'
 import About from "../components/home/About.astro"
-import FeatureHighlight from "../components/home/FeatureHighlight.astro"
+import HighlightedServices from "../components/home/HighlightedServices.astro"
 import ImageFeatures from "../components/home/ImageFeatures.astro"
-import TileFeatures from "../components/home/TileFeatures.astro"
+import TiledServices from "../components/home/TiledServices.astro"
+import { getCollection } from "astro:content"
 
-import {tileFeatures, imageFeatures, featureHighlight, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
+import {imageFeatures, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
 
-const aboutTextContent = marked(aboutText)
+const highlightedServices = await getCollection("services", ({ data }) => {
+    return data.highlight
+})
+
+const allServices = await getCollection("services")
+
+const aboutTextContent = Markdown.render(aboutText)
 ---
 
 <!doctype html>
@@ -32,15 +39,14 @@ const aboutTextContent = marked(aboutText)
 
         <Hero title={greetingTitle} subtitle={greetingSubtitle} />
 
-        <FeatureHighlight features={featureHighlight} />
+        <HighlightedServices services={highlightedServices} />
 
         <About title={aboutTitle} content={aboutTextContent} />
         
         <ImageFeatures features={imageFeatures}/>
         
-        <TileFeatures features={tileFeatures}/>
-
-		<Footer />
-    </main>       
+        <TiledServices services={allServices}/>
+    </main>    
+    <Footer />
 </body>
 </html>

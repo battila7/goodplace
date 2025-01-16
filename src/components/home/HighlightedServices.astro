@@ -1,21 +1,19 @@
 ---
 import Assets from '../../util/assets'
+import type { CollectionEntry } from 'astro:content'
 
-interface Feature {
-    title: string
-    description: string
-    icon: string
-    iconSvg?: any
+interface Service extends CollectionEntry<'services'> {
+    iconSvg?: string
 }
 
 interface Props {
-    features: Feature[]
+    services: Service[]
 }
 
-const { features } = Astro.props
+const { services } = Astro.props
 
-for (const feature of features) {
-    feature.iconSvg = await Assets.getSvg(feature.icon, {
+for (const service of services) {
+    service.iconSvg = await Assets.getSvg(service.data.icon, {
         addClasses: 'size-10 shrink-0',
         strokeWidth: 1,
     })
@@ -24,22 +22,22 @@ for (const feature of features) {
 
 <section class="w-full py-5 bg-gray-50">
     <div class="px-5 md:px-0 md:w-2/3 mx-auto flex flex-col gap-y-2 md:flex-row md:gap-x-2 md:justify-evenly">
-        {features.map(feature => (
-            <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
+        {services.map(service => (
+            <a href={"/services/" + service.id} class="bg-white hover:shadow-lg hover:bg-green-50 border border-gray-200 shadow-sm rounded-lg">
                 <div class="p-4 h-full w-full flex flex-row gap-x-5 items-center">
-                    <div set:html={feature.iconSvg} class="text-green-700">
+                    <div set:html={service.iconSvg} class="text-green-700">
                     </div>
                     <div class="flex flex-col gap-y-2">
                         <div class="text-lg md:text-md text-gray-800">
-                            {feature.title}
+                            {service.data.title}
                         </div>
                         <div class="hidden text-lg md:block md:text-sm text-gray-800">
-                            {feature.description}
+                            {service.data.subtitle}
                         </div>
                     </div>
                     
                 </div>
-            </div>
+            </a>
         ))}    
     </div>
 </section>
