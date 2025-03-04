@@ -1,5 +1,5 @@
 ---
-title: Lux Exclusive 4 fős apartman
+title: 3 Lux Exclusive 4 fős apartman
 gallery:
   - src/assets/images/room-5-1.jpg
   - src/assets/images/room-5-2.jpg
