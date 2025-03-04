@@ -1,5 +1,5 @@
 ---
-title: Teraszos
+title: Lux Exclusive 4 fős apartman
 gallery:
   - src/assets/images/room-5-1.jpg
   - src/assets/images/room-5-2.jpg
@@ -21,4 +21,7 @@ gallery:
   - src/assets/images/room-5-18.jpg
   - src/assets/images/room-5-19.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+28 m2 alapterületű apartman 1 db kétszemélyes (180x200 cm) ágy vagy
+két egy személyes külön ágy, új, kiváló minőségű matraccal, 1 db kihúzható
+kanapé ággyal. Jól felszerelt konyhával rendelkezik. Saját fürdőszoba, külön wc
+helyiség, bojler, törölközőszárító tartozik hozzá.
