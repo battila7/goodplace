@@ -133,7 +133,25 @@ collections:
         - label: "Tartalom"
           name: "content"
           widget: "markdown"
-
+      
+    - label: "Galéria"
+      name: "gallery"
+      file: "src/content/fixed-pages/gallery.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
+        - label: "Kép"
+          name: "gallery"
+          widget: "list"
+          field: 
+            label: "Kép"
+            name: "image"
+            widget: "image"
+            
     - label: "Közvetlen foglalási ajánlat"
       name: "direct-booking"
       file: "src/content/fixed-pages/direct-booking.json"

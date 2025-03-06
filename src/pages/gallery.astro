@@ -2,11 +2,73 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
 
-import { subtitle, content } from '../content/fixed-pages/about.json';
+import { subtitle, content, gallery } from '../content/fixed-pages/gallery.json';
+import Assets from "../util/assets";
+import { chunks } from "../util/arrays";
+import { Picture } from "astro:assets";
 
 const renderedContent = Markdown.render(content);
+
+const IMAGE_COLUMNS = 3
+
+const images = gallery.map(image => Assets.getImage(image))
+
+for (const image of images) {
+    await image;
+}
+
+const imageColumns = chunks(images, IMAGE_COLUMNS)
 ---
 <NormalPageLayout title="Galéria" href="/gallery">
+    <Fragment slot="head">
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+        <script>
+            document.addEventListener("alpine:init", () => {        
+                Alpine.data("gallery", () => ({
+                    imageGalleryOpened: false,
+                    imageGalleryActiveUrl: null,
+                    imageSrcs: [],
+                    
+                    init() {
+                        const imageTags = this.$el.querySelectorAll('img')
+
+                        this.imageSrcs = Array.from(imageTags).map(img => img.src)
+                    },
+
+                    imageGalleryOpen(el) {
+                        const imageElement = el.querySelector('img');
+
+                        this.imageGalleryActiveUrl = imageElement.src;
+                        this.imageGalleryOpened = true;
+                    },
+                    imageGalleryClose() {
+                        this.imageGalleryOpened = false;
+                        setTimeout(() => this.imageGalleryActiveUrl = null, 300);
+                    },
+                    imageGalleryPrev() {
+                        if (this.hasPreviousImage) {
+                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex - 1];
+                        }
+                    },
+                    imageGalleryNext() {
+                        if (this.hasNextImage) {
+                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex + 1];
+                        }
+                    },
+                    get activeImageIndex() {
+                        return this.imageSrcs.indexOf(this.imageGalleryActiveUrl);
+                    },
+                    get hasPreviousImage() {
+                        return this.activeImageIndex > 0;
+                    },
+                    get hasNextImage() {
+                        return this.activeImageIndex < this.imageSrcs.length - 1;
+                    }
+                }))
+            })
+        </script>
+    </Fragment>
+
     <span slot="title">Galéria</span>
     <span slot="description">
         {subtitle}
@@ -14,7 +76,57 @@ const renderedContent = Markdown.render(content);
 
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
-            <div set:html={renderedContent} class="px-5 md:px-0 md:w-2/3 mx-auto">
+            <div set:html={renderedContent} class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
+            </div>
+        </section>
+
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div x-data="gallery" class="w-full px-5 md:px-0 md:w-2/3 mx-auto">
+                <div class="grid grid-cols-3 gap-2 md:gap-4">
+                    {imageColumns.map(imageColumn => (
+                        <div class="grid content-start gap-2 md:gap-4">
+                            {imageColumn.map(image => (
+                                <div x-on:click="imageGalleryOpen($el)" data-src={image.src} class="tile relative overflow-hidden group cursor-zoom-in">
+                                    <Picture
+                                        src={image}
+                                        formats={["webp"]},
+                                        alt="",
+                                        class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
+                                    />
+                                    <div class="rounded-lg absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-75"></div>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+                <template x-teleport="body">
+                    <div 
+                        x-show="imageGalleryOpened" 
+                        x-transition:enter="transition ease-in-out duration-300" 
+                        x-transition:enter-start="opacity-0" 
+                        x-transition:leave="transition ease-in-in duration-300" 
+                        x-transition:leave-end="opacity-0" 
+                        @keydown.window.escape="imageGalleryClose" 
+                        x-trap.inert.noscroll="imageGalleryOpened"
+                        class="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-50 select-none" x-cloak>
+                        <div class="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12"> 
+                            <div :class="{ 'opacity-0': !hasPreviousImage }" class="text-white cursor-pointer" @click="imageGalleryPrev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+                            </div>
+                            <img 
+                                @click="imageGalleryClose" 
+                                x-show="imageGalleryOpened" 
+                                x-transition:enter="transition ease-in-out duration-300" 
+                                x-transition:enter-start="opacity-0 transform scale-50" 
+                                x-transition:leave="transition ease-in-in duration-300" 
+                                x-transition:leave-end="opacity-0 transform scale-50" 
+                                class="object-contain object-center w-full py-5 h-[100vh] select-none cursor-zoom-out" :src="imageGalleryActiveUrl" alt="" style="display: none;">
+                            <div :class="{ 'opacity-0': !hasNextImage }" class="text-white cursor-pointer" @click="imageGalleryNext">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </section>
     </Fragment>
