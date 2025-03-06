@@ -1,14 +1,14 @@
 {
-  "greetingTitle": "Egy jó hely.\nNeked.",
-  "greetingSubtitle": "Nyírbátor legjobb szálláshelye vár Rád! Akár egy éjszakára, akár egy hétvégére. Wellness, kikapcsolódás és 22 kW-os töltő.",
+  "greetingTitle": "Tökéletes pihenés Nyírbátor szívében",
+  "greetingSubtitle": "Ha nyugodt pihenésre vágysz vagy üzleti úton vagy, nálunk mindent megtalálsz, amire szükséged lehet: tágas, világos terek, teljesen felszerelt konyha, kényelmes ágyak és gyors Wi-Fi. Legyen szó egy hosszú hétvégéről vagy egy rövid üzleti tartózkodásról, apartmanunk tökéletes választás.\n",
   "aboutTitle": "Egy szálláshely,\nahol jó lenni.",
   "aboutText": "Good Place apartman várja látogatóit. Nyírbátor belvárosában a várostörténeti sétány közelében. Klimatizált teljes felszereltséggel (4K TV) rendelkező szobák, kényelmes ágyak, konyha (hűtő, mikró, indukciós fózőlap, edények, stb.). \n\nAz apartmanokhoz zuhanyozós fürdőszoba tartozik. Zárt parkoló kamerás megfigyeléssel, 2000m2 füves terület, minigolf, strandröplabdapálya, free wifi. Az apartmanok önellátóak, de változatos étkezési lehetőségek vannak 400-500 méteren belül (éttermek, pizzéria, büfé, kávézó, stb.) A Sárkány Wellness & Gyógyfürdő kocsival 5 perc távolságra.\n\nNagy figyelmet fordítottunk a megújuló energia hasznosítására. 22 kW-os Freecaharger autó tőltőnk van. kb 30 fő befogadására alkalmas zárt klimatizált teraszt.",
   "imageFeatures": [
     {
-        "title": "Bekészítés",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam.",
-        "image": "src/assets/images/room-1-1.jpg",
-        "imageSide": "right"
+      "title": "Bekészítés",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis libero eu orci dictum eleifend sed eget quam.",
+      "image": "src/assets/images/room-1-1.jpg",
+      "imageSide": "right"
     }
   ]
 }

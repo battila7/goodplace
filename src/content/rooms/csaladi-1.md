@@ -1,5 +1,5 @@
 ---
-title: Családi 1
+title: "1\tStandard Plus Design 4 fős apartman "
 gallery:
   - src/assets/images/room-3-1.jpg
   - src/assets/images/room-3-2.jpg
@@ -15,5 +15,10 @@ gallery:
   - src/assets/images/room-3-12.jpg
   - src/assets/images/room-3-13.jpg
   - src/assets/images/room-3-14.jpg
+  - src/assets/images/nyb1a3.png
 ---
-Ide fog jönni kis leírás, továbbá a szoba felszereltsége.
+22 m2 területű
+apartman 1db 160x200cm franciaágy új, kiváló minőségű matraccal, 1 db kihúzható
+kanapé ágy. Jól felszerelt konyhával rendelkezik.  Saját fürdőszoba, wc helyiség, bojler
+törölközőszárító tartozik hozzá. Egyedileg szabályozható fűtés-hűtés. 4K
+okosTV, nagy sebességű internet.
