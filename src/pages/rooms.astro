@@ -2,8 +2,12 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Room from "../components/Room.astro";
 import { getCollection } from "astro:content";
+import { subtitle, content } from '../content/fixed-pages/rooms.json';
+import Markdown from "../util/markdown";
 
 const roomsCollection = await getCollection("rooms");
+
+const renderedContent = Markdown.render(content);
 ---
 <NormalPageLayout title="Szobáink" href="/rooms">
     <Fragment slot="head">
@@ -13,6 +17,13 @@ const roomsCollection = await getCollection("rooms");
                 Alpine.data("gallery", () => ({
                     imageGalleryOpened: false,
                     imageGalleryActiveUrl: null,
+                    imageSrcs: [],
+                    
+                    init() {
+                        const imageTags = this.$el.querySelectorAll('img')
+
+                        this.imageSrcs = Array.from(imageTags).map(img => img.src)
+                    },
 
                     imageGalleryOpen(el) {
                         const imageElement = el.querySelector('img');
@@ -24,6 +35,25 @@ const roomsCollection = await getCollection("rooms");
                         this.imageGalleryOpened = false;
                         setTimeout(() => this.imageGalleryActiveUrl = null, 300);
                     },
+                    imageGalleryPrev() {
+                        if (this.hasPreviousImage) {
+                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex - 1];
+                        }
+                    },
+                    imageGalleryNext() {
+                        if (this.hasNextImage) {
+                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex + 1];
+                        }
+                    },
+                    get activeImageIndex() {
+                        return this.imageSrcs.indexOf(this.imageGalleryActiveUrl);
+                    },
+                    get hasPreviousImage() {
+                        return this.activeImageIndex > 0;
+                    },
+                    get hasNextImage() {
+                        return this.activeImageIndex < this.imageSrcs.length - 1;
+                    }
                 }))
             })
         </script>
@@ -33,10 +63,16 @@ const roomsCollection = await getCollection("rooms");
         Szobáink
     </span>
     <span slot="description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+        {subtitle}
     </span>
 
+
+
     <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div set:html={renderedContent} class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
+            </div>
+        </section>
         <section class="w-full py-5 md:py-10 bg-gray-50">
             <div class="flex flex-col gap-y-10 px-5 md:px-0 md:w-2/3 mx-auto">
                 {roomsCollection.map(room => (

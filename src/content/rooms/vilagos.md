@@ -8,4 +8,4 @@ gallery:
   - src/assets/images/room-2-5.jpg
   - src/assets/images/room-2-6.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse rem unde iusto laboriosam?
+Ide fog jönni kis leírás, továbbá a szoba felszereltsége.

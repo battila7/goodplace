@@ -34,7 +34,7 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
             {imageColumns.map(imageColumn => (
                 <div class="grid content-start gap-2 md:gap-4">
                     {imageColumn.map(image => (
-                        <div x-on:click="imageGalleryOpen($el)" class="tile relative overflow-hidden group cursor-zoom-in">
+                        <div x-on:click="imageGalleryOpen($el)" data-src={image.src} class="tile relative overflow-hidden group cursor-zoom-in">
                             <Picture
                                 src={image}
                                 formats={["webp"]},
@@ -54,18 +54,24 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
                 x-transition:enter-start="opacity-0" 
                 x-transition:leave="transition ease-in-in duration-300" 
                 x-transition:leave-end="opacity-0" 
-                @click="imageGalleryClose" 
                 @keydown.window.escape="imageGalleryClose" 
                 x-trap.inert.noscroll="imageGalleryOpened"
-                class="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-50 select-none cursor-zoom-out" x-cloak>
+                class="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-50 select-none" x-cloak>
                 <div class="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12"> 
+                    <div :class="{ 'opacity-0': !hasPreviousImage }" class="text-white cursor-pointer" @click="imageGalleryPrev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+                    </div>
                     <img 
+                        @click="imageGalleryClose" 
                         x-show="imageGalleryOpened" 
                         x-transition:enter="transition ease-in-out duration-300" 
                         x-transition:enter-start="opacity-0 transform scale-50" 
                         x-transition:leave="transition ease-in-in duration-300" 
                         x-transition:leave-end="opacity-0 transform scale-50" 
                         class="object-contain object-center w-full py-5 h-[100vh] select-none cursor-zoom-out" :src="imageGalleryActiveUrl" alt="" style="display: none;">
+                    <div :class="{ 'opacity-0': !hasNextImage }" class="text-white cursor-pointer" @click="imageGalleryNext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                    </div>
                 </div>
             </div>
         </template>
