@@ -1,0 +1,21 @@
+---
+import NormalPageLayout from "../layouts/NormalPageLayout.astro";
+import Markdown from '../util/markdown';
+
+import { subtitle, content } from '../content/fixed-pages/about.json';
+
+const renderedContent = Markdown.render(content);
+---
+<NormalPageLayout title="Promóciók" href="/promotions">
+    <span slot="title">Promóciók</span>
+    <span slot="description">
+        {subtitle}
+    </span>
+
+    <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div set:html={renderedContent} class="px-5 md:px-0 md:w-2/3 mx-auto">
+            </div>
+        </section>
+    </Fragment>
+</NormalPageLayout>

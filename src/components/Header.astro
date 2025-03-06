@@ -8,10 +8,13 @@ import { logo as logoImage } from '../content/general/logo.json'
 const loadedLogoImage = Assets.getImage(logoImage)
 
 const pages = [
-  { title: 'Kezdőlap', href: '/' },
-  { title: 'Szobáink', href: '/rooms' },
-  { title: 'Ajándék', href: '/extras' },
+  { title: 'Főoldal', href: '/' },
   { title: 'Rólunk', href: '/about-us' },
+  { title: 'Szobáink', href: '/rooms' },
+  { title: 'Galéria', href: '/gallery' },
+  { title: 'Élmények', href: '/experiences' },
+  { title: 'Promóciók', href: '/promotions' },
+  { title: 'Kapcsolat', href: '/contact' },
 ]
 
 const { href } = Astro.props 
@@ -22,7 +25,7 @@ const activeLinkClass = "bg-gray-100"
 <header class="shadow-md fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-200">
     <Announcement />
     <div class="flex flex-wrap md:justify-start md:flex-nowrap">
-        <div class="max-w-[85rem] flex flex-wrap justify-between lg:grid lg:grid-cols-3 basis-full items-center w-full mx-auto py-2.5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[85rem] flex flex-wrap justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] basis-full items-center w-full mx-auto py-2.5 px-4 sm:px-6 lg:px-8">
             <div class="order-1 flex items-center gap-x-3">
                 <div class="hidden sm:block">
                     <a class="text-green-700 flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Good Place Apartman">
