@@ -133,6 +133,31 @@ collections:
         - label: "Tartalom"
           name: "content"
           widget: "markdown"
+
+    - label: "Élmények"
+      name: "experiences"
+      file: "src/content/fixed-pages/experiences.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
+        - label: "Élmények"
+          name: "experiences"
+          widget: "list"
+          fields:
+            - label: "Név"
+              name: "title"
+              widget: "text"
+            - label: "Kép"
+              name: "image"
+              widget: "image"
+              choose_url: false
+            - label: "Tartalom"
+              name: "content"
+              widget: "markdown"
       
     - label: "Galéria"
       name: "gallery"
@@ -197,6 +222,17 @@ collections:
     - label: "Rólunk"
       name: "about"
       file: "src/content/fixed-pages/about.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Tartalom"
+          name: "content"
+          widget: "markdown"
+
+    - label: "Promóciók"
+      name: "promotions"
+      file: "src/content/fixed-pages/promotions.json"
       fields:
         - label: "Alcím"
           name: "subtitle"

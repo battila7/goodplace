@@ -2,7 +2,7 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
 
-import { subtitle, content } from '../content/fixed-pages/about.json';
+import { subtitle, content } from '../content/fixed-pages/promotions.json';
 
 const renderedContent = Markdown.render(content);
 ---
@@ -14,7 +14,7 @@ const renderedContent = Markdown.render(content);
 
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
-            <div set:html={renderedContent} class="px-5 md:px-0 md:w-2/3 mx-auto">
+            <div set:html={renderedContent} class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
             </div>
         </section>
     </Fragment>

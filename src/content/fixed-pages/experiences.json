@@ -1,0 +1,11 @@
+{
+  "subtitle": "Fedezd fel Nyírbátor látnivalóit és eseményeit!",
+  "content": "Ha **Nyírbátor látnivalói** és kulturális programjai iránt érdeklődsz, számos izgalmas helyszín és rendezvény vár rád. Történelmi emlékek, építészeti csodák és pezsgő programok teszik felejthetetlenné a látogatásodat.",
+  "experiences": [
+    {
+      "title": "Várostörténeti sétány | Nyírbátor",
+      "image": "src/assets/images/setany.jpg",
+      "content": "Sétálj végig Nyírbátor történelmi utcáin, és ismerd meg a város gazdag múltját! A Várostörténeti sétány információs táblákkal és emlékművekkel mutatja be Nyírbátor örökségét.\n\n1 órás program a látogatók szerint. Egész évben érdemes idelátogatni.\n\n**Helyszíni szolgáltatások**\n- ✅ étkezési lehetőségek: környéken\n\n**Parkolás:**\n- ✅ Parkoló a közelben: Ingyenes\n- ✅ Távolság a szolgáltatótól: 100 m\n- ✅ Parkoló jellege: Közterület\n\n**Megközelítés**\n- Távolság a vasútállomástól: 700 m\n- Távolság a buszmegállótól: 700 m"
+    }
+  ]
+}

@@ -2,7 +2,23 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
 
-import { subtitle, content } from '../content/fixed-pages/about.json';
+import { subtitle, content, experiences } from '../content/fixed-pages/experiences.json';
+import { Picture } from "astro:assets";
+import Assets from "../util/assets";
+
+const loadedExperiences = [];
+
+for (const experience of experiences) {
+    const image = Assets.getImage(experience.image);
+
+    await image;
+
+    loadedExperiences.push({
+        ...experience,
+        image: image,
+        renderedContent: Markdown.render(experience.content)
+    })
+}
 
 const renderedContent = Markdown.render(content);
 ---
@@ -14,7 +30,27 @@ const renderedContent = Markdown.render(content);
 
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
-            <div set:html={renderedContent} class="px-5 md:px-0 md:w-2/3 mx-auto">
+            <div set:html={renderedContent} class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
+            </div>
+        </section>
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-7 px-5 md:px-0 md:w-2/3 mx-auto">
+                {loadedExperiences.map(experience => (
+                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
+                        <div class="rounded-t-lg h-full w-full flex flex-col gap-y-4 items-center">
+                            <div class="w-full">
+                                <Picture formats={["webp"]} class="rounded-t-lg" src={experience.image} alt={experience.title} />
+                            </div>
+                            <div class="w-full px-4 pb-4">
+                                <h3 class="text-lg font-bold">
+                                    {experience.title}
+                                </h3>
+                                <div set:html={experience.renderedContent} class="prose prose-p:text-justify">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))} 
             </div>
         </section>
     </Fragment>
