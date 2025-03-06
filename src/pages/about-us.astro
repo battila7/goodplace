@@ -1,10 +1,27 @@
 ---
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
+import Assets from '../util/assets'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
 
 import { subtitle, content } from '../content/fixed-pages/about.json';
 
 const renderedContent = Markdown.render(content);
+
+interface Service extends CollectionEntry<'services'> {
+    iconSvg?: string
+}
+
+
+const services: Service[] = await getCollection("services")
+
+for (const service of services) {
+    service.iconSvg = await Assets.getSvg(service.data.icon, {
+        addClasses: 'size-6 md:size-10 shrink-0',
+        strokeWidth: 1,
+    })
+}
 ---
 <NormalPageLayout title="Rólunk" href="/about-us">
     <span slot="title">Rólunk</span>
@@ -14,8 +31,40 @@ const renderedContent = Markdown.render(content);
 
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
-            <div set:html={renderedContent} class="px-5 md:px-0 md:w-2/3 mx-auto">
+            <div set:html={renderedContent} class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
+            </div>
+        </section>
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="px-5 md:px-0 md:w-1/2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
+                {services.map(service => (
+                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
+                        <div class="p-4 h-full w-full flex flex-row gap-x-5 items-center">
+                            <div set:html={service.iconSvg} class="text-green-700">
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="md:text-lg text-md text-gray-800">
+                                    {service.data.title}
+                                </div>
+                                <div class="md:text-lg text-sm text-gray-800">
+                                    {service.data.subtitle}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                ))}  
+            </div>
+        </section>
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="prose lg:prose-xl prose-p:text-justify px-5 md:px-0 md:w-2/3 mx-auto">
+                <h3>
+                    Ezeket mondták rólunk:
+                </h3>
+                <div>
+                    Itt lesznek a google review-k.
+                </div>
             </div>
         </section>
     </Fragment>
 </NormalPageLayout>
+ 

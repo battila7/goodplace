@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@source "preline/dist";
+@plugin "preline/plugin"; 
+@plugin "@tailwindcss/typography";

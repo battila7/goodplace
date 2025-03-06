@@ -187,25 +187,12 @@ collections:
     - label: "Alcím"
       name: "subtitle"
       widget: "string"
-    - label: "Kiemelt szolgáltatás? (Azaz, megjelenjen a nyitókép alatt?)"
-      name: "highlight"
-      widget: "boolean"
-      default: false
     - label: "Ikon"
       name: "icon"
       widget: "image"
       allow_multiple: false
       choose_url: false
-    - label: "Tartalom"
-      name: "body"
-      widget: "markdown"
-    - label: "Kép"
-      name: "gallery"
-      widget: "list"
-      field: 
-        label: "Kép"
-        name: "image"
-        widget: "image"
+
 
 - name: "additional-pages"
   label: "További oldal"

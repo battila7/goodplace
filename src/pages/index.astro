@@ -1,20 +1,17 @@
 ---
 import Markdown from "../util/markdown"
+import "../styles/global.css";
 
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Hero from '../components/home/Hero.astro'
 import About from "../components/home/About.astro"
-import HighlightedServices from "../components/home/HighlightedServices.astro"
 import ImageFeatures from "../components/home/ImageFeatures.astro"
 import TiledServices from "../components/home/TiledServices.astro"
 import { getCollection } from "astro:content"
 
 import {imageFeatures, greetingTitle, greetingSubtitle, aboutTitle, aboutText} from "../content/fixed-pages/home.json"
 
-const highlightedServices = await getCollection("services", ({ data }) => {
-    return data.highlight
-})
 
 const allServices = await getCollection("services")
 
@@ -27,6 +24,7 @@ const aboutTextContent = Markdown.render(aboutText)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -38,8 +36,6 @@ const aboutTextContent = Markdown.render(aboutText)
         <div class="w-full h-[56px]"></div>
 
         <Hero title={greetingTitle} subtitle={greetingSubtitle} />
-
-        <HighlightedServices services={highlightedServices} />
 
         <About title={aboutTitle} content={aboutTextContent} />
         
