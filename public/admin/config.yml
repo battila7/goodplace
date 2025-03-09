@@ -229,6 +229,24 @@ collections:
         - label: "Tartalom"
           name: "content"
           widget: "markdown"
+    
+    - label: "Kapcsolat"
+      name: "contact"
+      file: "src/content/fixed-pages/contact.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Gyakran ismételt kérdések"
+          name: "faq"
+          widget: "list"
+          fields:
+            - label: "Kérdés"
+              name: "question"
+              widget: "text"
+            - label: "Válasz"
+              name: "answer"
+              widget: "markdown"
 
     - label: "Promóciók"
       name: "promotions"
