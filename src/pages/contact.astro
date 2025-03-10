@@ -2,6 +2,7 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 
 import { subtitle, faq } from '../content/fixed-pages/contact.json';
+import * as contact from '../content/general/contact.json';
 import Markdown from "../util/markdown";
 
 const renderedFaq = faq.map((item) => ({
@@ -17,6 +18,35 @@ const renderedFaq = faq.map((item) => ({
 
     <Fragment slot="content">
         <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="w-11/12 md:w-2/3 mx-auto">
+                <h2 class="text-2xl font-bold pb-5">Elérhetőségeink</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <h3 class="text-lg font-bold">Telefonszám</h3>
+                        <p>{contact.phone}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">Email</h3>
+                        <p>{contact.email}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">Cím</h3>
+                        <p>{contact.address}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">Közösségi média</h3>
+                        <div class="flex gap-x-2">
+                            <a href={contact.facebook} class="inline-flex items-center text-green-700 bg-stone-100 hover:bg-stone-200 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-6 lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+        
+                            <a href={contact.instagram} class="inline-flex items-center text-green-700 bg-stone-100 hover:bg-stone-200 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-6 lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="w-full py-5 md:py-10 bg-gray-50">
@@ -27,21 +57,35 @@ const renderedFaq = faq.map((item) => ({
                     <div class="hs-accordion w-full bg-white rounded-lg shadow-sm dark:bg-neutral-800" id="hs-basic-heading-two">
                     <button class="hs-accordion-toggle hs-accordion-active:text-green-600 px-6 py-3 inline-flex items-center gap-x-3 text-sm w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-green-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-collapse-two">
                         <svg class="hs-accordion-active:hidden hs-accordion-active:text-green-600 hs-accordion-active:group-hover:text-green-600 block size-4 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5v14"></path>
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
                         </svg>
                         <svg class="hs-accordion-active:block hs-accordion-active:text-green-600 hs-accordion-active:group-hover:text-green-600 hidden size-4 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
+                            <path d="M5 12h14"></path>
                         </svg>
                         {item.question}
                     </button>
                     <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-heading-two">
                         <div class="pb-4 px-6">
-                        <div set:html={item.answer} class="text-gray-600 prose"></div>
+                            <div set:html={item.answer} class="text-gray-600 prose"></div>
                         </div>
                     </div>
                     </div>))}
                   </div>
+            </div>
+        </section>
+
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="w-11/12 md:w-2/3 mx-auto space-y-5">
+                <h2 class="text-2xl font-bold">Élvezd a Good Place Apartman kényelmét!</h2>
+                <div>
+                    Minden felmerülő kérdésedre találtál választ? Ne habozz, foglald le szállásodat a lenti gombra kattintva.
+                </div>
+                <div>
+                    <a class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Foglalni szeretnék!
+                    </a>
+                </div>
             </div>
         </section>
     </Fragment>
