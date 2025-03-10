@@ -8,14 +8,61 @@ import { image as prettyImage } from '../content/general/pretty.json'
 const loadedPrettyImage = Assets.getImage(prettyImage)
 ---
 
-<section class="w-full py-10 bg-stone-600 min-h-[50vh]">
+<section class="w-full bg-stone-200 min-h-[50vh]">
     <div class="md:w-2/3 h-full mx-auto">
-        <h2 class="px-5 sm:px-0 w-full text-center text-white text-4xl font-semibold playfair-display">
-            Örömmel várunk!
-        </h2>
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-y-5 pt-10">
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5 pt-10">
+            <div class="px-5 sm:px-0 space-y-2">
+                <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
+                    Good Place Apartman, Nyírbátor
+                </h2>
+                <div class="text-stone-600 text-md text-justify">
+                    A Good Place Apartman nem csupán egy szálláshely, hanem egy modern, otthonos és tökéletesen felszerelt apartman, amely kiváló választás akár turistáknak, akár üzleti utazóknak.
+                </div>
+            </div>
+            <div class="px-5 sm:px-0 space-y-2">
+                <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
+                    Népszerű oldalak
+                    <span class="pt-2 hidden md:block text-stone-200">
+                        spacing
+                    </span>
+                </h2>
+                <div>
+                    <ul class="flex flex-col gap-y-2 text-stone-600 text-md underline">
+                        <li>
+                            <a href="/about-us">
+                                Ismerj meg minket!
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/promotions">
+                                Aktuális kedvezmények
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/experiences">
+                                Nyírbátor környéki élmények
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="px-5 sm:px-0 space-y-2">
+                <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
+                    Hírlevél
+                    <span class="pt-2 hidden md:block text-stone-200">
+                        spacing
+                    </span>
+                </h2>
+                <div class="text-stone-600 text-md text-justify">
+                    Iratkozz fel hírlevelünkre, hogy elsőként értesülj egyedi ajánlatainkról, exkluzív kedvezményeinkről.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="w-full pt-10">
             <div class="px-5 sm:px-0 h-full flex flex-col gap-y-5 justify-center">
-                <div class="flex flex-col gap-y-2 text-stone-300 text-xl font-light">
+                <div class="flex flex-col gap-y-2 text-stone-600 text-md">
                     <p>
                         {address}
                     </p>
@@ -27,18 +74,18 @@ const loadedPrettyImage = Assets.getImage(prettyImage)
                     </p>
                 </div>
                 <div class="flex gap-x-2">
-                    <a href={facebook} class="inline-flex items-center text-gray-800 bg-stone-300 hover:bg-stone-200 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
+                    <a href={facebook} class="inline-flex items-center text-stone-600 bg-stone-300 hover:bg-green-100 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-6 lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
 
-                    <a href={instagram} class="inline-flex items-center text-gray-800 bg-stone-300 hover:bg-stone-200 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
+                    <a href={instagram} class="inline-flex items-center text-stone-600 bg-stone-300 hover:bg-green-100 p-1.5 rounded-full focus:outline-none focus:bg-gray-100" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-6 lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
                 </div>
                 <div>
-                    <Image src={loadedPrettyImage} alt="Szép kártya elfogadóhely" class="shadow-md rounded-lg w-2/3">
+                    <Image src={loadedPrettyImage} alt="Szép kártya elfogadóhely" class="shadow-md rounded-lg w-full md:w-3/8">
                 </div>
-                <div class="flex flex-col gap-y-2 text-stone-300 font-light">
+                <div class="flex flex-col gap-y-2 text-stone-600 text-md font-light">
                     <a href="/aszf" class="hover:underline">
                         Általános Szerződési Feltételek
                     </a>
@@ -46,11 +93,6 @@ const loadedPrettyImage = Assets.getImage(prettyImage)
                         Adatvédelmi Tájékoztató
                     </a>
                 </div>
-            </div>
-            <div>
-                <h3>
-                    Itt lesz a térkép.
-                </h3>
             </div>
         </div>
     </div>
