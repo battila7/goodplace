@@ -8,17 +8,6 @@ function getMarkdownFilesFromContentDir(collection) {
     })
 }
 
-const servicesCollection = defineCollection(
-    {
-        loader: getMarkdownFilesFromContentDir("services"),
-        schema: () => z.object({
-            title: z.string(),
-            subtitle: z.string(),
-            icon: z.string(),
-        })
-    }
-)
-
 const additionalPagesCollection = defineCollection(
     {
         loader: getMarkdownFilesFromContentDir("additional-pages"),
@@ -52,7 +41,6 @@ const roomsCollection = defineCollection(
 )
 
 export const collections = {
-    services: servicesCollection,
     additionalPages: additionalPagesCollection,
     sights: sightsCollection,
     rooms: roomsCollection,

@@ -1,4 +1,26 @@
 {
   "subtitle": "Különleges ajánlatok és promóciók",
-  "content": "Ne maradj le **exkluzív kedvezményeinkről és különleges csomagajánlatainkról!** Legyen szó hosszabb tartózkodásról, hétvégi kikapcsolódásról vagy családi összejövetelről, nálunk mindig találsz **kedvező ajánlatokat**.\n\n**Foglalj most, és használd ki a legjobb árakat és extra szolgáltatásokat!**"
+  "content": "Ne maradj le **exkluzív kedvezményeinkről és különleges csomagajánlatainkról!** Legyen szó hosszabb tartózkodásról, hétvégi kikapcsolódásról vagy családi összejövetelről, nálunk mindig találsz **kedvező ajánlatokat**.\n\n**Foglalj most, és használd ki a legjobb árakat és extra szolgáltatásokat!**",
+  "promotions": [
+    { 
+      "title": "Kedvezményes hétvégi szállás",
+      "image": "src/assets/images/room-1-1.jpg",
+      "content": "Kedvezményes hétvégi szállás ajánlatunkkal élvezd a hétvégi pihenésedet!",
+      "active": true
+    },
+    { 
+      "title": "Kedvezményes hétvégi szállás",
+      "image": "src/assets/images/room-1-1.jpg",
+      "content": "Kedvezményes hétvégi szállás ajánlatunkkal élvezd a hétvégi pihenésedet!",
+      "active": true
+    },
+    { 
+      "title": "Kedvezményes hétvégi szállás",
+      "image": "src/assets/images/room-1-1.jpg",
+      "content": "Kedvezményes hétvégi szállás ajánlatunkkal élvezd a hétvégi pihenésedet!",
+      "active": false
+    }
+  ]
 }
+
+  
