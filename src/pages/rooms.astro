@@ -17,12 +17,15 @@ const renderedContent = Markdown.render(content);
                 Alpine.data("gallery", () => ({
                     imageGalleryOpened: false,
                     imageGalleryActiveUrl: null,
-                    imageSrcs: [],
-                    
-                    init() {
-                        const imageTags = this.$el.querySelectorAll('img')
+                    imageCount: 0,
+                    imageGalleryActiveIndex: 0,
+                    imageGalleryEl: null,
 
-                        this.imageSrcs = Array.from(imageTags).map(img => img.src)
+
+                    init() {
+                        this.imageGalleryEl = this.$el
+                        const imageTags = this.imageGalleryEl.querySelectorAll('img')
+                        this.imageCount = imageTags.length
                     },
 
                     imageGalleryOpen(el) {
@@ -30,6 +33,12 @@ const renderedContent = Markdown.render(content);
 
                         this.imageGalleryActiveUrl = imageElement.src;
                         this.imageGalleryOpened = true;
+
+                        const imageClasses = imageElement.className;
+                        console.log(imageClasses)
+                        const activeIndexPlusCruft = imageClasses.split('img-')[1]
+                        const activeIndexAsText = activeIndexPlusCruft.split(' ')[0]
+                        this.imageGalleryActiveIndex = parseInt(activeIndexAsText);
                     },
                     imageGalleryClose() {
                         this.imageGalleryOpened = false;
@@ -37,22 +46,24 @@ const renderedContent = Markdown.render(content);
                     },
                     imageGalleryPrev() {
                         if (this.hasPreviousImage) {
-                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex - 1];
+                            this.imageGalleryActiveIndex--;
+                            this.imageGalleryActiveUrl = this.srcForIndex(this.imageGalleryActiveIndex);
                         }
                     },
                     imageGalleryNext() {
                         if (this.hasNextImage) {
-                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex + 1];
+                            this.imageGalleryActiveIndex++;
+                            this.imageGalleryActiveUrl = this.srcForIndex(this.imageGalleryActiveIndex);
                         }
                     },
-                    get activeImageIndex() {
-                        return this.imageSrcs.indexOf(this.imageGalleryActiveUrl);
-                    },
                     get hasPreviousImage() {
-                        return this.activeImageIndex > 0;
+                        return this.imageGalleryActiveIndex > 0;
                     },
                     get hasNextImage() {
-                        return this.activeImageIndex < this.imageSrcs.length - 1;
+                        return this.imageGalleryActiveIndex < this.imageCount - 1;
+                    },
+                    srcForIndex(index: number): string {
+                        return this.imageGalleryEl.querySelector(`img.img-${index}`).src
                     }
                 }))
             })

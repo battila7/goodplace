@@ -4,7 +4,7 @@ import Markdown from '../util/markdown';
 
 import { subtitle, content, gallery } from '../content/fixed-pages/gallery.json';
 import Assets from "../util/assets";
-import { chunks } from "../util/arrays";
+import { chunksAndIndices } from "../util/arrays";
 import { Picture } from "astro:assets";
 
 const renderedContent = Markdown.render(content);
@@ -17,7 +17,11 @@ for (const image of images) {
     await image;
 }
 
-const imageColumns = chunks(images, IMAGE_COLUMNS)
+const imageColumns = chunksAndIndices(images, IMAGE_COLUMNS)
+
+function imageClasses(index: number) {
+    return `img-${index} h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125`
+}
 ---
 <NormalPageLayout title="Galéria" href="/gallery">
     <Fragment slot="head">
@@ -27,12 +31,15 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
                 Alpine.data("gallery", () => ({
                     imageGalleryOpened: false,
                     imageGalleryActiveUrl: null,
-                    imageSrcs: [],
-                    
-                    init() {
-                        const imageTags = this.$el.querySelectorAll('img')
+                    imageCount: 0,
+                    imageGalleryActiveIndex: 0,
+                    imageGalleryEl: null,
 
-                        this.imageSrcs = Array.from(imageTags).map(img => img.src)
+
+                    init() {
+                        this.imageGalleryEl = this.$el
+                        const imageTags = this.imageGalleryEl.querySelectorAll('img')
+                        this.imageCount = imageTags.length
                     },
 
                     imageGalleryOpen(el) {
@@ -40,6 +47,12 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
 
                         this.imageGalleryActiveUrl = imageElement.src;
                         this.imageGalleryOpened = true;
+
+                        const imageClasses = imageElement.className;
+                        console.log(imageClasses)
+                        const activeIndexPlusCruft = imageClasses.split('img-')[1]
+                        const activeIndexAsText = activeIndexPlusCruft.split(' ')[0]
+                        this.imageGalleryActiveIndex = parseInt(activeIndexAsText);
                     },
                     imageGalleryClose() {
                         this.imageGalleryOpened = false;
@@ -47,22 +60,24 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
                     },
                     imageGalleryPrev() {
                         if (this.hasPreviousImage) {
-                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex - 1];
+                            this.imageGalleryActiveIndex--;
+                            this.imageGalleryActiveUrl = this.srcForIndex(this.imageGalleryActiveIndex);
                         }
                     },
                     imageGalleryNext() {
                         if (this.hasNextImage) {
-                            this.imageGalleryActiveUrl = this.imageSrcs[this.activeImageIndex + 1];
+                            this.imageGalleryActiveIndex++;
+                            this.imageGalleryActiveUrl = this.srcForIndex(this.imageGalleryActiveIndex);
                         }
                     },
-                    get activeImageIndex() {
-                        return this.imageSrcs.indexOf(this.imageGalleryActiveUrl);
-                    },
                     get hasPreviousImage() {
-                        return this.activeImageIndex > 0;
+                        return this.imageGalleryActiveIndex > 0;
                     },
                     get hasNextImage() {
-                        return this.activeImageIndex < this.imageSrcs.length - 1;
+                        return this.imageGalleryActiveIndex < this.imageCount - 1;
+                    },
+                    srcForIndex(index: number): string {
+                        return this.imageGalleryEl.querySelector(`img.img-${index}`).src
                     }
                 }))
             })
@@ -86,14 +101,13 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
                     {imageColumns.map(imageColumn => (
                         <div class="grid content-start gap-2 md:gap-4">
                             {imageColumn.map(image => (
-                                <div x-on:click="imageGalleryOpen($el)" data-src={image.src} class="tile relative overflow-hidden group cursor-zoom-in">
+                                <div x-on:click="imageGalleryOpen($el)" data-src={image.item.src} class="tile relative overflow-hidden group cursor-zoom-in">
                                     <Picture
-                                        src={image}
+                                        src={image.item}
                                         formats={["webp"]},
                                         alt="",
-                                        class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
+                                        class={imageClasses(image.index)}
                                     />
-                                    <div class="rounded-lg absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-75"></div>
                                 </div>
                             ))}
                         </div>

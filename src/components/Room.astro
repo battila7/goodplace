@@ -2,7 +2,7 @@
 import { Picture } from "astro:assets"
 import { render } from "astro:content"
 import Assets from "../util/assets"
-import { chunks } from "../util/arrays"
+import { chunksAndIndices } from "../util/arrays"
 
 const IMAGE_COLUMNS = 3
 
@@ -16,7 +16,11 @@ for (const image of images) {
     await image;
 }
 
-const imageColumns = chunks(images, IMAGE_COLUMNS)
+const imageColumns = chunksAndIndices(images, IMAGE_COLUMNS)
+
+function imageClasses(index: number) {
+    return `img-${index} h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125`
+}
 ---
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     <div>
@@ -34,12 +38,12 @@ const imageColumns = chunks(images, IMAGE_COLUMNS)
             {imageColumns.map(imageColumn => (
                 <div class="grid content-start gap-2 md:gap-4">
                     {imageColumn.map(image => (
-                        <div x-on:click="imageGalleryOpen($el)" data-src={image.src} class="tile relative overflow-hidden group cursor-zoom-in">
+                        <div x-on:click="imageGalleryOpen($el)" data-src={image.item.src} class="tile relative overflow-hidden group cursor-zoom-in">
                             <Picture
-                                src={image}
+                                src={image.item}
                                 formats={["webp"]},
                                 alt={collectionEntry.data.title},
-                                class="h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125"
+                                class={imageClasses(image.index)}
                             />
                             <div class="rounded-lg absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-75"></div>
                         </div>
