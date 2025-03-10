@@ -4,8 +4,12 @@ import Assets from '../util/assets'
 
 import { address, phone, email, facebook, instagram } from '../content/general/contact.json'
 import { image as prettyImage } from '../content/general/pretty.json'
-
+import * as footerContent from '../content/general/footer.json'
+import Markdown from '../util/markdown'
 const loadedPrettyImage = Assets.getImage(prettyImage)
+
+const renderedLeftContent = Markdown.render(footerContent.leftContent)
+const renderedNewsletterContent = Markdown.render(footerContent.newsletterContent)
 ---
 
 <section class="w-full bg-stone-200 min-h-[50vh]">
@@ -13,48 +17,38 @@ const loadedPrettyImage = Assets.getImage(prettyImage)
         <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5 pt-10">
             <div class="px-5 sm:px-0 space-y-2">
                 <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
-                    Good Place Apartman, Nyírbátor
+                    {footerContent.leftTitle}
                 </h2>
-                <div class="text-stone-600 text-md text-justify">
-                    A Good Place Apartman nem csupán egy szálláshely, hanem egy modern, otthonos és tökéletesen felszerelt apartman, amely kiváló választás akár turistáknak, akár üzleti utazóknak.
+                <div set:html={renderedLeftContent} class="text-stone-600 prose text-justify">
                 </div>
             </div>
             <div class="px-5 sm:px-0 space-y-2">
                 <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
                     Népszerű oldalak
-                    <span class="pt-2 hidden md:block text-stone-200">
+                    <div class="pt-1 hidden md:block text-stone-200">
                         spacing
-                    </span>
+                    </div>
                 </h2>
                 <div>
                     <ul class="flex flex-col gap-y-2 text-stone-600 text-md underline">
-                        <li>
-                            <a href="/about-us">
-                                Ismerj meg minket!
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/promotions">
-                                Aktuális kedvezmények
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/experiences">
-                                Nyírbátor környéki élmények
-                            </a>
-                        </li>
+                        {footerContent.popularLinks.map((link) => (
+                            <li>
+                                <a href={link.link}>
+                                    {link.title}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
             <div class="px-5 sm:px-0 space-y-2">
                 <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
                     Hírlevél
-                    <span class="pt-2 hidden md:block text-stone-200">
+                    <div class="pt-1 hidden md:block text-stone-200">
                         spacing
-                    </span>
+                    </div>
                 </h2>
-                <div class="text-stone-600 text-md text-justify">
-                    Iratkozz fel hírlevelünkre, hogy elsőként értesülj egyedi ajánlatainkról, exkluzív kedvezményeinkről.
+                <div set:html={renderedNewsletterContent} class="text-stone-600 prose text-justify">
                 </div>
             </div>
             

@@ -1,0 +1,19 @@
+{
+  "leftTitle": "Good Place Apartman, Nyírbátor",
+  "leftContent": "A Good Place Apartman nem csupán egy szálláshely, hanem egy modern, otthonos és tökéletesen felszerelt apartman, amely kiváló választás akár turistáknak, akár üzleti utazóknak.",
+  "popularLinks": [
+    {
+      "title": "Ismerj meg minket!",
+      "link": "/about-us"
+    },
+    {
+      "title": "Aktuális kedvezmények",
+      "link": "/promotions"
+    },
+    {
+      "title": "Nyírbátor környéki élmények",
+      "link": "/experiences"
+    }
+  ],
+  "newsletterContent": "Iratkozz fel hírlevelünkre, hogy elsőként értesülj egyedi ajánlatainkról, exkluzív kedvezményeinkről."
+}
