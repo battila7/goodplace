@@ -286,6 +286,16 @@ collections:
         - label: "Tartalom"
           name: "content"
           widget: "markdown"
+        - label: "Google-értékelések"
+          name: "googleReviews"
+          widget: "list"
+          fields:
+            - label: "Értékelés"
+              name: ""
+              widget: "review"
+            - label: "Kersztnév"
+              name: "name"
+              widget: "markdown"
     
     - label: "Kapcsolat"
       name: "contact"
