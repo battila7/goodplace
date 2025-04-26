@@ -2,12 +2,40 @@
   "subtitle": "Kérdésed van, vagy szeretnél foglalni? Vedd fel velünk a kapcsolatot, és segítünk mindenben!",
   "faq": [
     {
-      "question": "Háziállatot is lehet hozni?",
-      "answer": "Igen, szívesen várjuk a kis barátaidat is!"
+      "question": "Mit tartalmaz a feltüntetett ár?",
+      "answer": "Az oldalon szereplő szoba- és csomagárak bruttó árak.\n\nAz árak alapesetben a szállásra vonatkoznak, emellett az ár tartalmazhat ellátást is, amennyiben a szállásadó erre lehetőséget és ez a foglalás során a szállásfoglaláshoz hozzáadható. Amennyiben elláttást is választunk, így az ár már azt is tartalmazza.\n\nEgy adott csomag tartamáról minden esetben a csomagra kattintva tudsz tájékozódni.\n\nLátható, hogy milyen szolgáltatásokat lehet igénybe venni a szálláshelyen és annak felára is.\n\nAz IFA ( idegenforgalmi adó) legtöbb esetben külön fizetendő, erről minden esetben a szálláshely adatlapján tájékozódhatsz.\n\nAz idegenforgalmi adó éjszakánként és fejenként értendő és fizetendő."
     },
     {
-      "question": "Milyen fizetési lehetőségek vannak?",
-      "answer": "Készpénz, kártya, SZÉP kártya."
+      "question": "Kérhetek-e pótágyat vagy kiságyat gyermekem részére?",
+      "answer": "A foglalás során fontos megadni a gyermek(ek) létszámát és pontos életkorát is, azért, hogy megfelelő szobatípust tudj foglalni, ami már rendelkezik elegendő férőhellyel akár pótágy, kanapéágy vagy különágy formájában."
+    },
+    {
+      "question": "Nincsen email címem, hogyan tudok anélkül foglalni?",
+      "answer": "\nAz oldalunkon keresztül történő szállásfoglalásra csak valós email cím megadásával van lehetőség. vagy telefonos elérhetőségeinken +36 30 575 5593, +36 70 339 3841 a\nszállásdíj előre utalásával."
+    },
+    {
+      "question": "Hogyan tudom autóval megközelíteni az apartmant?",
+      "answer": "Budapestről az M3-as, majd Ófehértónál lehajtva térjen rá erre: E579  Nyírbátor  irányába az autópályától apartmanunk 12,5 km-re található́ (13 perc)."
+    },
+    {
+      "question": "Szükséges külön fizetni a parkolásért?",
+      "answer": "Szállóvendégeink részére térítésmentesen biztosítjuk a parkolást őrzött parkolóban."
+    },
+    {
+      "question": "Lehetséges elektromos autó töltés a Good place apartman területén?",
+      "answer": "Elektromos töltőállomás kialakítása megtörtént, már van lehetőség az elektromos autók töltésére."
+    },
+    {
+      "question": "Mikor van lehetőség a szobát elfoglalni és elhagyni? ",
+      "answer": "A szobát érkezés napján 14.00 órától tudják elfoglalni, távozás napján 10.00 óráig szükséges elhagyni."
+    },
+    {
+      "question": "Lehetséges korai érkezés vagy késői távozás? ",
+      "answer": "Apartmanjainkban lehetőség van korábbi érkezést vagy későbbi távozást igényelni.\n\n\nA szobahosszabbítás szabad kapacitás esetén vehető igénybe, így kérjük, hogy a részletekről érdeklődjön foglaláskor!\n\n* Korai érkezés: 10.00-14.00 óráig: 6.000 Ft / szoba\n* Késői távozás: 10.00-14.00 óráig: 6.000 Ft / szoba\n* 14.00-órától: teljes szobaár fizetendő\n\nAmennyiben a szoba elhagyása 10.00 után történik, a 6.000 Ft szobahosszabbítási díj automatikusan a szobához terhelődik."
+    },
+    {
+      "question": "Milyen fizetési feltételekkel tudok szobát foglalni? ",
+      "answer": "Kedvezményes ajánlatainknál érkezéskor a helyszínen készpénzzel, bankkártyával vagy saját névre szóló SZÉP kártyával tudja rendezni számláját. Az előfoglalási kedvezményes ajánlatainknál 100% előleg befizetését, ünnepi időszakaink foglalása esetén 50% előleg befizetését kérjük a foglalást követő 8 napon belül. (Az idegenforgalmi adó és a közvetített szolgáltatások nem fizethetők SZÉP kártyával!)"
     }
   ]
 }
