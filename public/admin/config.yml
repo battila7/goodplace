@@ -210,6 +210,17 @@ collections:
           name: "content"
           widget: "markdown"
 
+    - label: "Foglalás"
+      name: "book-your-stay"
+      file: "src/content/fixed-pages/book-your-stay.json"
+      fields:
+        - label: "Alcím"
+          name: "subtitle"
+          widget: "text"
+        - label: "Tartalom"
+          name: "content"
+          widget: "Markdown"
+
     - label: "Élmények"
       name: "experiences"
       file: "src/content/fixed-pages/experiences.json"

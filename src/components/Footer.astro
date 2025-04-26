@@ -12,7 +12,7 @@ const renderedLeftContent = Markdown.render(footerContent.leftContent)
 const renderedNewsletterContent = Markdown.render(footerContent.newsletterContent)
 ---
 
-<section class="w-full bg-stone-200 min-h-[50vh]">
+<section class="w-full bg-stone-200 min-h-[50vh] pb-5">
     <div class="md:w-2/3 h-full mx-auto">
         <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5 pt-10">
             <div class="px-5 sm:px-0 space-y-2">
@@ -42,6 +42,7 @@ const renderedNewsletterContent = Markdown.render(footerContent.newsletterConten
                 </div>
             </div>
             <div class="px-5 sm:px-0 space-y-2">
+                <!--
                 <h2 class="w-full text-stone-600 text-2xl font-semibold playfair-display">
                     Hírlevél
                     <div class="pt-1 hidden md:block text-stone-200">
@@ -50,6 +51,7 @@ const renderedNewsletterContent = Markdown.render(footerContent.newsletterConten
                 </h2>
                 <div set:html={renderedNewsletterContent} class="text-stone-600 prose text-justify">
                 </div>
+                 -->
             </div>
             
         </div>

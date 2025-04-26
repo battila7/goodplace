@@ -1,0 +1,36 @@
+---
+import NormalPageLayout from "../layouts/NormalPageLayout.astro";
+
+import { subtitle, content } from '../content/fixed-pages/book-your-stay.json';
+import * as contact from '../content/general/contact.json';
+import Markdown from "../util/markdown";
+
+---
+<NormalPageLayout title="Foglalás" href="/">
+    <span slot="title">Foglalás</span>
+    <span slot="description">
+        {subtitle}
+    </span>
+
+    <Fragment slot="content">
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="w-11/12 md:w-2/3 mx-auto">
+                <div set:html={Markdown.render(content)} class="prose-lg pb-5">
+                    
+                </div>
+
+                <h2 class="text-2xl font-bold pb-5">Elérhetőségeink</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <h3 class="text-lg font-bold">Telefonszám</h3>
+                        <p>{contact.phone}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">Email</h3>
+                        <p>{contact.email}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </Fragment>
+</NormalPageLayout>
