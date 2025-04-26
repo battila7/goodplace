@@ -10,7 +10,7 @@ const renderedFaq = faq.map((item) => ({
     answer: Markdown.render(item.answer)
 }));
 ---
-<NormalPageLayout title="Kapcsolat" href="/contact">
+<NormalPageLayout title="Kapcsolat" subtitle={subtitle} href="/contact">
     <span slot="title">Kapcsolat</span>
     <span slot="description">
         {subtitle}

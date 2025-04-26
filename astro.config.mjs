@@ -11,4 +11,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: "https://good-place-apartman.netlify.app"
 });

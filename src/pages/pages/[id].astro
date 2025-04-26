@@ -21,7 +21,7 @@ const { page } = Astro.props;
 
 const { Content } = await render(page)
 ---
-<CoverImagePageLayout title={page.data.title} coverImage={page.data.coverImage} href="/">
+<CoverImagePageLayout title={page.data.title} subtitle={page.data.subtitle} coverImage={page.data.coverImage} href="/">
     <span class="whitespace-pre" slot="title">{page.data.title}</span>
     <span slot="description">
         {page.data.subtitle}

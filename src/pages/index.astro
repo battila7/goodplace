@@ -44,6 +44,9 @@ const imageColumns = chunksAndIndices(images, IMAGE_COLUMNS)
 function imageClasses(index: number) {
     return `img-${index} h-auto max-w-full rounded-lg transition-transform duration-300 transform group-hover:scale-125`
 }
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL('/apartman/main.jpg', Astro.url);
 ---
 
 <!doctype html>
@@ -51,6 +54,12 @@ function imageClasses(index: number) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Good Place Apartman Nyírbátor">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content={greetingTitle}>
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:image" content={socialImageURL}>
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +130,6 @@ function imageClasses(index: number) {
         <div class="w-full h-[56px]"></div>
 
         <Hero title={greetingTitle} subtitle={greetingSubtitle} />
-
 
         {banners.map((banner) => (
             <section class="w-full py-10 bg-gray-50 min-h-[50vh]">

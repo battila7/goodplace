@@ -4,9 +4,11 @@ import Footer from '../components/Footer.astro'
 import { Image } from 'astro:assets'
 import Assets from '../util/assets'
 
-const { title, href, coverImage } = Astro.props
+const { title, subtitle, href, coverImage } = Astro.props
 
 const loadedCoverImage = coverImage && Assets.getImage(coverImage)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL('/apartman/main.jpg', Astro.url);
 ---
 <!doctype html>
 <html>
@@ -14,6 +16,14 @@ const loadedCoverImage = coverImage && Assets.getImage(coverImage)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+
+    
+    <meta property="og:title" content={title + "| Good Place Apartman Nyírbátor"}>
+    <meta property="og:type" content="website">
+    <meta property="og:description" content={subtitle}>
+    <meta property="og:url" content={canonicalURL}>
+    <meta property="og:image" content={socialImageURL}>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
