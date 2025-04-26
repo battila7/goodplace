@@ -36,29 +36,29 @@
       "title": "Romantikus hétvége – Ajándék pezsgővel",
       "content": "\nTöltsétek el a hétvégét egy modern, otthonos apartmanban, ahol csak egymásra figyelhettek! Csendes környezet, kényelmes ágyak, tágas nappali és teljesen felszerelt konyha vár rátok. Foglalás esetén **ajándék pezsgővel** kedveskedünk, hogy még különlegesebb legyen az itt töltött idő.",
       "ctaButtonLabel": "Foglalj most!",
-      "ctaButtonLink": "/asd"
+      "ctaButtonLink": "/book-your-stay"
     }
   ],
   "experiences": [
     {
       "title": "Különleges szállás családoknak Nyírbátorban",
       "description": "\nA **Good Place Apartman** tökéletes választás családok számára, akik **nyugodt, kényelmes és modern szálláshelyet keresnek**. Tágas terek, teljesen felszerelt konyha és barátságos környezet vár, hogy az itt töltött idő valóban pihentető és gondtalan legyen.",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/baby.svg"
     },
     {
       "title": "Fedezd fel Nyírbátort!",
       "description": "\nNyírbátor **történelmi és természeti kincsei** számos felfedeznivalót kínálnak. Látogass el a **Báthori Várkastélyba**, csodáld meg a **Nyírbátori Református Templomot**, vagy lazíts a **Sárkány Wellness & Gyógyfürdőben**. A város és környéke garantáltan felejthetetlen élményekkel vár!",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/castle.svg"
     },
     {
       "title": "Privát parkoló",
       "description": "\nVendégeink számára **ingyenes és kényelmes parkolási lehetőséget biztosítunk** közvetlenül az apartman közelében. Így nem kell aggódnod a parkolóhely keresése miatt, és nyugodtan élvezheted az itt töltött időt.",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/square-parking.svg"
     },
     {
       "title": "Számos kikapcsolódási lehetőség",
       "description": "\nLegyen szó pihenésről vagy aktív kikapcsolódásról, nálunk minden adott! A közelben található **minigolf, strandröplabda pálya és wellnessfürdő** is, így minden korosztály számára izgalmas programokat kínálunk. **Töltsd el az időt úgy, ahogyan neked a legjobb!**",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/volleyball.svg"
     }
   ],
   "experiencesTitle": "Tökéletes hely a pihenéshez és közös élményekhez",
@@ -77,17 +77,17 @@
     {
       "title": "Főzz úgy, mintha otthon lennél",
       "description": "Főzz úgy, mintha otthon lennél! Modern konyhai eszközökkel és minden szükséges felszereléssel várunk.",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/cooking-pot.svg"
     },
     {
       "title": "Központi, de nyugodt elhelyezkedés",
       "description": "Nyírbátor belvárosának közelében, csendes környezetben – tökéletes kiindulópont a város felfedezéséhez.",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/map-pinned.svg"
     },
     {
       "title": "Gyors Wi-Fi és kényelmes parkolás",
       "description": "Ingyenes, nagy sebességű internet és parkoló, hogy minden gördülékenyen menjen az itt-tartózkodásod alatt. Ráadásul 22 kW-os töltőről tudod tölteni elektromos autódat.",
-      "icon": "src/assets/images/bed.svg"
+      "icon": "src/assets/images/wifi.svg"
     }
   ],
   "greetingTitle": "Tökéletes pihenés Nyírbátor szívében",
