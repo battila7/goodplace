@@ -2,7 +2,7 @@ name: Load Events
 
 on:
   schedule:
-    cron: '23 6 * * *'
+    - cron: '23 6 * * *'
   workflow_dispatch:
 
 jobs:
