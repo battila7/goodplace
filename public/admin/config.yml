@@ -244,7 +244,24 @@ collections:
               choose_url: false
             - label: "Tartalom"
               name: "content"
-              widget: "markdown"
+              widget: "markdown"      
+        - label: "Esemény"
+          name: "events"
+          widget: "list"
+          fields:
+            - label: "Név"
+              name: "title"
+              widget: "string"
+            - label: "Időpont"
+              name: "date"
+              widget: "datetime"
+            - label: "Link"
+              name: "link"
+              widget: "string"
+            - label: "Manuálisan létrehozott"
+              name: "manual"
+              widget: "hidden"
+              default: true
       
     - label: "Galéria"
       name: "gallery"
@@ -263,18 +280,6 @@ collections:
             label: "Kép"
             name: "image"
             widget: "image"
-            
-    - label: "Látnivalók"
-      name: "sights"
-      file: "src/content/fixed-pages/sights.json"
-      fields:
-        - label: "Alcím"
-          name: "subtitle"
-          widget: "text"
-        - label: "Borítókép"
-          name: "coverImage"
-          widget: "image"
-          choose_url: false
 
     - label: "Rólunk"
       name: "about"
@@ -361,25 +366,6 @@ collections:
     - label: "Tartalom"
       name: "body"
       widget: "markdown"
-
-- name: "sights"
-  label: "Látnivaló"
-  folder: "src/content/sights"
-  create: true
-  fields:
-    - label: "Név"
-      name: "title"
-      widget: "string"
-    - label: "Leírás"
-      name: "body"
-      widget: "markdown"
-    - label: "Kép"
-      name: "image"
-      widget: "image"
-      allow_multiple: false
-    - label: "Link"
-      name: "link"
-      widget: "string"
 
 - name: "rooms"
   label: "Szoba"
