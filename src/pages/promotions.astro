@@ -34,52 +34,56 @@ for (const promotion of promotions) {
             </div>
         </section>
 
-        <section class="w-full pb-5 bg-gray-50">
-            <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto space-y-5">
-                <div class="flex">
-                    <h2 class="text-green-700 text-2xl md:text-3xl font-semibold playfair-display">Aktuális promóciók</h2>
-                </div>
-                <div class="flex flex-col gap-y-5">
-                    {loadedPromotions.filter(promotion => promotion.active).map(promotion => (
-                        <div class="bg-white border border-gray-200 shadow-sm rounded-lg flex flex-col md:flex-row md:gap-5">
-                            <div class="w-full md:w-[200px]">
-                                <Picture formats={["webp"]} class="rounded-t-lg md:rounded-none md:rounded-l-lg" src={promotion.image} alt={promotion.title} />
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-green-700 text-xl md:text-2xl font-semibold playfair-display">  
-                                    {promotion.title}
-                                </h3>
-                                <div set:html={promotion.renderedContent} class="prose lg:prose-lg text-justify text-gray-800">
+        {loadedPromotions.filter(promotion => promotion.active).length > 0 &&
+            <section class="w-full pb-5 bg-gray-50">
+                <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto space-y-5">
+                    <div class="flex">
+                        <h2 class="text-green-700 text-2xl md:text-3xl font-semibold playfair-display">Aktuális promóciók</h2>
+                    </div>
+                    <div class="flex flex-col gap-y-5">
+                        {loadedPromotions.filter(promotion => promotion.active).map(promotion => (
+                            <div class="bg-white border border-gray-200 shadow-sm rounded-lg flex flex-col md:flex-row md:gap-5">
+                                <div class="w-full md:w-[200px]">
+                                    <Picture formats={["webp"]} class="rounded-t-lg md:rounded-none md:rounded-l-lg" src={promotion.image} alt={promotion.title} />
+                                </div>
+                                <div class="p-5">
+                                    <h3 class="text-green-700 text-xl md:text-2xl font-semibold playfair-display">  
+                                        {promotion.title}
+                                    </h3>
+                                    <div set:html={promotion.renderedContent} class="prose lg:prose-lg text-justify text-gray-800">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>         
-            </div>
-        </section>
+                        ))}
+                    </div>         
+                </div>
+            </section>
+        }
 
-        <section class="w-full pb-5 bg-gray-50">
-            <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto space-y-5">
-                <div class="flex">
-                    <h2 class="text-green-700 text-2xl md:text-3xl font-semibold playfair-display">Korábbi promóciók</h2>
-                </div>
-                <div class="flex flex-col gap-y-5">
-                    {loadedPromotions.filter(promotion => !promotion.active).map(promotion => (
-                        <div class="bg-white border border-gray-200 shadow-sm rounded-lg flex flex-col md:flex-row md:gap-5">
-                            <div class="w-full md:w-[200px]">
-                                <Picture formats={["webp"]} class="rounded-t-lg md:rounded-none md:rounded-l-lg opacity-50" src={promotion.image} alt={promotion.title} />
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-green-700 text-xl md:text-2xl font-semibold playfair-display">  
-                                    {promotion.title}
-                                </h3>
-                                <div set:html={promotion.renderedContent} class="prose lg:prose-lg text-justify text-gray-800">
+        {loadedPromotions.filter(promotion => !promotion.active).length > 0 &&        
+            <section class="w-full pb-5 bg-gray-50">
+                <div class="px-5 md:px-0 md:w-2/3 h-full mx-auto space-y-5">
+                    <div class="flex">
+                        <h2 class="text-green-700 text-2xl md:text-3xl font-semibold playfair-display">Korábbi promóciók</h2>
+                    </div>
+                    <div class="flex flex-col gap-y-5">
+                        {loadedPromotions.filter(promotion => !promotion.active).map(promotion => (
+                            <div class="bg-white border border-gray-200 shadow-sm rounded-lg flex flex-col md:flex-row md:gap-5">
+                                <div class="w-full md:w-[200px]">
+                                    <Picture formats={["webp"]} class="rounded-t-lg md:rounded-none md:rounded-l-lg opacity-50" src={promotion.image} alt={promotion.title} />
+                                </div>
+                                <div class="p-5">
+                                    <h3 class="text-green-700 text-xl md:text-2xl font-semibold playfair-display">  
+                                        {promotion.title}
+                                    </h3>
+                                    <div set:html={promotion.renderedContent} class="prose lg:prose-lg text-justify text-gray-800">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>         
-            </div>
-        </section>
+                        ))}
+                    </div>         
+                </div>
+            </section>
+        }
     </Fragment>
 </NormalPageLayout>
