@@ -1,0 +1,43 @@
+name: Load Events
+
+on:
+  schedule:
+    cron: '23 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  load:
+    name: 'Load'
+    runs-on: ubuntu-22.04
+
+    timeout-minutes: 5
+    
+    steps: 
+    - uses: actions/checkout@v4
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22.x'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: |
+        pnpm install
+
+    - name: Run the event loader script
+      run: |
+        node event-loader/index.mjs
+    
+    - name: Commit the changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        add: |
+          - src/content/fixed-pages/experiences.json
+        message: 'Loaded events'
