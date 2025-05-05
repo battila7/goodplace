@@ -5,7 +5,61 @@
     {
       "title": "Várostörténeti sétány | Nyírbátor",
       "image": "src/assets/images/setany.jpg",
-      "content": "Sétálj végig Nyírbátor történelmi utcáin, és ismerd meg a város gazdag múltját! A Várostörténeti sétány információs táblákkal és emlékművekkel mutatja be Nyírbátor örökségét.\n\n1 órás program a látogatók szerint. Egész évben érdemes idelátogatni.\n\n**Helyszíni szolgáltatások**\n- ✅ étkezési lehetőségek: környéken\n\n**Parkolás:**\n- ✅ Parkoló a közelben: Ingyenes\n- ✅ Távolság a szolgáltatótól: 100 m\n- ✅ Parkoló jellege: Közterület\n\n**Megközelítés**\n- Távolság a vasútállomástól: 700 m\n- Távolság a buszmegállótól: 700 m"
+      "content": "Sétálj végig Nyírbátor történelmi utcáin, és ismerd meg a város gazdag múltját! A Várostörténeti sétány információs táblákkal és emlékművekkel mutatja be Nyírbátor örökségét.",
+      "link": "https://nyirbator.hu/varostorteneti-setany",
+      "goodToKnow": [
+          {
+            "entry": "Apartmanunktól csupán 100 méterre található."
+          },
+          {
+            "entry": "Egész évben érdemes megtekinteni."
+          }
+      ]
+    },
+    {
+      "title": "Sárkány Wellness és Gyógyfürdő | Nyírbátor",
+      "image": "src/assets/images/sarkany-furdo-logo-2.jpg",
+      "content": "Kapcsolódj ki a fürdő számtalan kényeztető szolgáltatásával, a kényeztető masszázstól egészen az óriás csúszdákig!",
+      "link": "https://www.sarkanyfurdo.hu/hu/",
+      "goodToKnow": [
+          {
+            "entry": "Finn szauna, infra szauna, gőzfürdő és sókabin is várja a látogatókat."
+          },
+          {
+            "entry": "Nyáron élménymedence és csúszdák is üzemelnek."
+          }
+      ]
+    },
+    {
+      "title": "Alföldi Kéktúra szakaszok",
+      "image": "src/assets/images/kektura.jpg",
+      "content": "Az Alföldi Kéktúra két szakaszon is várja a természet szerelmeseit Nyírbátor környékén.",
+      "link": "https://www.kektura.hu/ak-szakaszok",
+      "goodToKnow": [
+          {
+            "entry": "Az AK-11 szakasz Haláptól (Debrecen) indulva ér el Nyírbátorig."
+          },
+          {
+            "entry": "Az AK-12 szakasz pedig Nyírbátorból indul Kisvárda irányába."
+          },
+          {
+            "entry": "Promóciónk keretében a Kéktúra résztvevőinek 10% kedvezményt kínálunk (előzetes emailes bejelentkezés esetén)."
+          }
+      ]
+    },
+    {
+      "title": "RabócsiRing | Máriapócs",
+      "image": "src/assets/images/rabocsiring.jpg",
+      "content": "A benzingőz és a motorsportok iránt rajongóknak kihagyhatatlan az apartmanunktól néhány kilométerre található RabócsiRing.",
+      "link": "https://www.rabocsiring.hu/",
+      "goodToKnow": [
+          {
+            "entry": "A versenypályán egész évben rendeznek eseményeket a drifttől a gokartig."
+          },
+          {
+            "entry": "A vezetéstechnikai tanpályán saját járművünkön fejleszthetjük vezetési ismereteinket."
+          }
+      ]
     }
   ],
   "events": [

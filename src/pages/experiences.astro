@@ -55,15 +55,29 @@ const renderedContent = Markdown.render(content);
                 {loadedExperiences.map(experience => (
                     <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
                         <div class="rounded-t-lg h-full w-full flex flex-col gap-y-4 items-center">
-                            <div class="w-full">
-                                <Picture formats={["webp"]} class="rounded-t-lg" src={experience.image} alt={experience.title} />
+                            <div class="w-full h-64">
+                                <Picture formats={["webp"]} class="rounded-t-lg w-full h-64 object-cover" src={experience.image} alt={experience.title} />
                             </div>
-                            <div class="w-full px-4 pb-4">
-                                <h3 class="text-lg font-bold">
-                                    {experience.title}
-                                </h3>
-                                <div set:html={experience.renderedContent} class="prose prose-p:text-justify">
+                            <div class="flex flex-col justify-between gap-y-2 h-full w-full px-4 pb-4">
+                                <div class="flex flex-col gap-y-2">
+                                    <h3 class="text-lg font-bold">
+                                        {experience.title}
+                                    </h3>
+                                    <div set:html={experience.renderedContent} class="prose prose-p:text-justify">
+                                    </div>
+                                    <ul class="list-disc list-inside">
+                                        {experience.goodToKnow.map(gtk => (
+                                            <li class="text-gray-600">{gtk.entry}</li>
+                                        ))}
+                                    </ul>
                                 </div>
+                                {experience.link &&
+                                    <div class="flex flex-row-reverse">
+                                        <a href={experience.link} target="_blank" class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            Részletek
+                                        </a>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>

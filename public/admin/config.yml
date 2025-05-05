@@ -242,9 +242,18 @@ collections:
               name: "image"
               widget: "image"
               choose_url: false
+            - label: "Link"
+              name: "link"
+              widget: "string"
+              required: false
             - label: "Tartalom"
               name: "content"
-              widget: "markdown"      
+              widget: "markdown"
+            - label: "Jó tudni"
+              name: "goodToKnow"
+              widget: "list"
+              field: {label: "Bejegyzés", name: "entry", widget: "string"}
+
         - label: "Esemény"
           name: "events"
           widget: "list"
