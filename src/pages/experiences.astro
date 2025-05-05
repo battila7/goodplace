@@ -2,9 +2,26 @@
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
 
-import { subtitle, content, experiences } from '../content/fixed-pages/experiences.json';
+import { subtitle, content, experiences, events } from '../content/fixed-pages/experiences.json';
 import { Picture } from "astro:assets";
 import Assets from "../util/assets";
+
+import dayjs from 'dayjs'
+import isSameOrBefore from "dayjs/plugin/isSameOrBefore.js"
+import 'dayjs/locale/hu'
+dayjs.extend(isSameOrBefore)
+
+const sortedEvents = events.map(
+    evt => {
+        return {
+            title: evt.title,
+            link: evt.link,
+            date: dayjs(evt.date)
+        }
+    }
+).sort((a, b) => {
+    return a.date.diff(b.date)
+})
 
 const loadedExperiences = [];
 
@@ -51,6 +68,30 @@ const renderedContent = Markdown.render(content);
                         </div>
                     </div>
                 ))} 
+            </div>
+        </section>
+        <section class="w-full py-5 md:py-10 bg-gray-50">
+            <div class="px-5 md:px-0 md:w-2/3 mx-auto">
+                <h3 class="md:text-3xl pb-2">
+                    Események
+                </h3>
+                <div class="flex flex-col gap-y-2">
+                    {sortedEvents.map(evt => (
+                        <div class="flex flex-row bg-white justify-between items-center border border-gray-200 shadow-sm rounded-lg p-4">
+                            <div class="flex flex-row gap-x-5 items-center">
+                                <div class="text-green-800 font-semibold">
+                                    {evt.date.locale('hu').format('MMMM')}&nbsp;{evt.date.locale('hu').format('DD.')}     
+                                </div>
+                                <div>
+                                    {evt.title}
+                                </div>
+                            </div>
+                            <a href={evt.link} target="_blank" class="py-2 px-3 shadow-sm inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Részletek
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     </Fragment>
