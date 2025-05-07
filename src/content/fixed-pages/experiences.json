@@ -8,12 +8,12 @@
       "content": "Sétálj végig Nyírbátor történelmi utcáin, és ismerd meg a város gazdag múltját! A Várostörténeti sétány információs táblákkal és emlékművekkel mutatja be Nyírbátor örökségét.",
       "link": "https://nyirbator.hu/varostorteneti-setany",
       "goodToKnow": [
-          {
-            "entry": "Apartmanunktól csupán 100 méterre található."
-          },
-          {
-            "entry": "Egész évben érdemes megtekinteni."
-          }
+        {
+          "entry": "Apartmanunktól csupán 100 méterre található."
+        },
+        {
+          "entry": "Egész évben érdemes megtekinteni."
+        }
       ]
     },
     {
@@ -22,12 +22,12 @@
       "content": "Kapcsolódj ki a fürdő számtalan kényeztető szolgáltatásával, a kényeztető masszázstól egészen az óriás csúszdákig!",
       "link": "https://www.sarkanyfurdo.hu/hu/",
       "goodToKnow": [
-          {
-            "entry": "Finn szauna, infra szauna, gőzfürdő és sókabin is várja a látogatókat."
-          },
-          {
-            "entry": "Nyáron élménymedence és csúszdák is üzemelnek."
-          }
+        {
+          "entry": "Finn szauna, infra szauna, gőzfürdő és sókabin is várja a látogatókat."
+        },
+        {
+          "entry": "Nyáron élménymedence és csúszdák is üzemelnek."
+        }
       ]
     },
     {
@@ -36,15 +36,15 @@
       "content": "Az Alföldi Kéktúra két szakaszon is várja a természet szerelmeseit Nyírbátor környékén.",
       "link": "https://www.kektura.hu/ak-szakaszok",
       "goodToKnow": [
-          {
-            "entry": "Az AK-11 szakasz Haláptól (Debrecen) indulva ér el Nyírbátorig."
-          },
-          {
-            "entry": "Az AK-12 szakasz pedig Nyírbátorból indul Kisvárda irányába."
-          },
-          {
-            "entry": "Promóciónk keretében a Kéktúra résztvevőinek 10% kedvezményt kínálunk (előzetes emailes bejelentkezés esetén)."
-          }
+        {
+          "entry": "Az AK-11 szakasz Haláptól (Debrecen) indulva ér el Nyírbátorig."
+        },
+        {
+          "entry": "Az AK-12 szakasz pedig Nyírbátorból indul Kisvárda irányába."
+        },
+        {
+          "entry": "Promóciónk keretében a Kéktúra résztvevőinek 10% kedvezményt kínálunk (előzetes emailes bejelentkezés esetén)."
+        }
       ]
     },
     {
@@ -53,12 +53,12 @@
       "content": "A benzingőz és a motorsportok iránt rajongóknak kihagyhatatlan az apartmanunktól néhány kilométerre található RabócsiRing.",
       "link": "https://www.rabocsiring.hu/",
       "goodToKnow": [
-          {
-            "entry": "A versenypályán egész évben rendeznek eseményeket a drifttől a gokartig."
-          },
-          {
-            "entry": "A vezetéstechnikai tanpályán saját járművünkön fejleszthetjük vezetési ismereteinket."
-          }
+        {
+          "entry": "A versenypályán egész évben rendeznek eseményeket a drifttől a gokartig."
+        },
+        {
+          "entry": "A vezetéstechnikai tanpályán saját járművünkön fejleszthetjük vezetési ismereteinket."
+        }
       ]
     }
   ],
@@ -74,6 +74,12 @@
       "date": "2025-05-17T18:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/hadhazi-laszlo-onallo-estje/118"
+    },
+    {
+      "title": "Dzsúdló koncert",
+      "date": "2025-05-23T20:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/dzsudlo-koncert/125"
     }
   ]
 }
