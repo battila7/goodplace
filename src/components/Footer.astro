@@ -81,6 +81,7 @@ const renderedNewsletterContent = Markdown.render(footerContent.newsletterConten
                 <div>
                     <Image src={loadedPrettyImage} alt="Szép kártya elfogadóhely" class="shadow-md rounded-lg w-full md:w-3/8">
                 </div>
+                { false &&
                 <div class="flex flex-col gap-y-2 text-stone-600 text-md font-light">
                     <a href="/aszf" class="hover:underline">
                         Általános Szerződési Feltételek
@@ -89,6 +90,7 @@ const renderedNewsletterContent = Markdown.render(footerContent.newsletterConten
                         Adatvédelmi Tájékoztató
                     </a>
                 </div>
+                }
             </div>
         </div>
     </div>
