@@ -9,16 +9,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL('/apartman/gpa-main.webp', Astro.url);
 ---
 <!doctype html>
-<html>
+<html lang="hu">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
 
-    
+    <title>{title + "| Good Place Apartman Nyírbátor"}</title>
     <meta property="og:title" content={title + "| Good Place Apartman Nyírbátor"}>
     <meta property="og:type" content="website">
     <meta property="og:description" content={subtitle}>
+    <meta property="description" content={subtitle}>
     <meta property="og:url" content={canonicalURL}>
     <meta property="og:image" content={socialImageURL}>
 

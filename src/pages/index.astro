@@ -50,22 +50,19 @@ const socialImageURL = new URL('/apartman/gpa-main.webp', Astro.url);
 ---
 
 <!doctype html>
-<html>
+<html lang="hu">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Good Place Partman Nyírbátor</title>
   <meta property="og:title" content="Good Place Apartman Nyírbátor">
   <meta property="og:type" content="website">
   <meta property="og:description" content={greetingTitle}>
+  <meta property="description" content={greetingTitle}>
   <meta property="og:url" content={canonicalURL}>
   <meta property="og:image" content={socialImageURL}>
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <script>import "preline/dist/preline.js";</script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script>
             document.addEventListener("alpine:init", () => {        
