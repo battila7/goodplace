@@ -62,12 +62,5 @@
       ]
     }
   ],
-  "events": [
-    {
-      "title": "Dzsúdló koncert",
-      "date": "2025-05-23T20:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/dzsudlo-koncert/125"
-    }
-  ]
+  "events": []
 }
