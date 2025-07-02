@@ -1,30 +1,13 @@
 ---
 import NormalPageLayout from "../layouts/NormalPageLayout.astro";
 import Markdown from '../util/markdown';
-import Assets from '../util/assets'
-import type { CollectionEntry } from 'astro:content'
-import { getCollection } from 'astro:content'
+import { Image } from "astro:assets";
 
 import { subtitle, content, googleReviews } from '../content/fixed-pages/about.json';
-import { Image } from "astro:assets";
 
 import bookingAward from '../assets/images/booking-award.png';
 
 const renderedContent = Markdown.render(content);
-
-interface Service extends CollectionEntry<'services'> {
-    iconSvg?: string
-}
-
-
-const services: Service[] = await getCollection("services")
-
-for (const service of services) {
-    service.iconSvg = await Assets.getSvg(service.data.icon, {
-        addClasses: 'size-6 md:size-10 shrink-0',
-        strokeWidth: 1,
-    })
-}
 ---
 <NormalPageLayout title="Rólunk" subtitle={subtitle} href="/about-us">
     <span slot="title">Rólunk</span>

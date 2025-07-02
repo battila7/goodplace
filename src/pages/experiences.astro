@@ -65,11 +65,13 @@ const renderedContent = Markdown.render(content);
                                     </h3>
                                     <div set:html={experience.renderedContent} class="prose prose-p:text-justify">
                                     </div>
+                                    {experience.goodToKnow &&
                                     <ul class="list-disc list-inside">
                                         {experience.goodToKnow.map(gtk => (
                                             <li class="text-gray-600">{gtk.entry}</li>
                                         ))}
                                     </ul>
+                                    }
                                 </div>
                                 {experience.link &&
                                     <div class="flex flex-row-reverse">
