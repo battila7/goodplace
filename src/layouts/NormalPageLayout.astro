@@ -20,6 +20,7 @@ const socialImageURL = new URL('/apartman/gpa-main.webp', Astro.url);
     <meta name="description" content={subtitle}>
     <meta property="og:url" content={canonicalURL}>
     <meta property="og:image" content={socialImageURL}>
+    <script>import "preline/dist/preline.js";</script>
 
     <slot name="head"></slot>
 </head>
