@@ -69,22 +69,16 @@
   ],
   "events": [
     {
-      "title": "Bátori estek",
-      "date": "2025-10-10T18:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/batori-estek/160"
-    },
-    {
       "title": "Férfi kézilabda mérkőzés",
       "date": "2025-10-12T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/ferfi-kezilabda-merkozes/172"
     },
     {
-      "title": "Ezt benéztem - Musimbe Dávid Dennis önálló estje",
+      "title": "Musimbe Dávid Dennis önálló estje - Ezt benéztem",
       "date": "2025-10-16T19:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/ezt-beneztem--musimbe-david-dennis-onallo-estje/145"
+      "link": "https://kulturaliskozpont.com/esemeny/musimbe-david-dennis-onallo-estje--ezt-beneztem/186"
     },
     {
       "title": "Férfi kézilabda mérkőzés",
@@ -109,6 +103,12 @@
       "date": "2025-10-27T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/zoran-koncert/158"
+    },
+    {
+      "title": "Frakk, a macskák réme",
+      "date": "2025-11-03T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/frakk-a-macskak-reme/184"
     },
     {
       "title": "Futsal meccs",
