@@ -69,12 +69,6 @@
   ],
   "events": [
     {
-      "title": "Zorán koncert",
-      "date": "2025-10-27T19:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/zoran-koncert/158"
-    },
-    {
       "title": "Frakk, a macskák réme",
       "date": "2025-11-03T10:00:00.000Z",
       "manual": false,
@@ -115,6 +109,12 @@
       "date": "2025-11-24T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/futsal-meccs/183"
+    },
+    {
+      "title": "Kiss Ádám önálló estje - Mit nem mondok",
+      "date": "2025-11-26T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/kiss-adam-onallo-estje--mit-nem-mondok/187"
     }
   ]
 }
