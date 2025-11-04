@@ -2,13 +2,11 @@
   "subtitle": "Különleges ajánlatok és promóciók",
   "content": "Ne maradj le **exkluzív kedvezményeinkről és különleges csomagajánlatainkról!** Legyen szó hosszabb tartózkodásról, hétvégi kikapcsolódásról vagy családi összejövetelről, nálunk mindig találsz **kedvező ajánlatokat**.\n\n**Foglalj most, és használd ki a legjobb árakat és extra szolgáltatásokat!**",
   "promotions": [
-    { 
+    {
       "title": "Kedvezmény a Kéktúrán résztvevőknek",
       "image": "src/assets/images/kektura.jpg",
-      "content": "A Kéktúrán résztvevők 10% kedvezményt kapnak a szállásdíjból e-mailes bejelentkezés esetén.",
+      "content": "A Kéktúrán résztvevők  10% kedvezményt kapnak a szállásdíjból e-mail bejelentkezéssel, készpénz fizetés esetén.",
       "active": true
     }
   ]
 }
-
-  
