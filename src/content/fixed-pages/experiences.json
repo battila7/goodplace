@@ -75,22 +75,16 @@
   ],
   "events": [
     {
-      "title": "Frakk, a macskák réme",
-      "date": "2025-11-04T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/frakk-a-macskak-reme/184"
-    },
-    {
-      "title": "Frakk, a macskák réme",
-      "date": "2025-11-04T14:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/frakk-a-macskak-reme/202"
-    },
-    {
-      "title": "Futsal meccs",
+      "title": "Férfi FUTSAL mérkőzés",
       "date": "2025-11-07T19:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/futsal-meccs/182"
+      "link": "https://kulturaliskozpont.com/esemeny/ferfi-futsal-merkozes/182"
+    },
+    {
+      "title": "Játszóház nap a Sárkány Fürdőben",
+      "date": "2025-11-08T08:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/jatszohaz-nap-a-sarkany-furdoben/206"
     },
     {
       "title": "Az Ackroyd-gyilkosság - Veres 1 Színház",
@@ -105,16 +99,16 @@
       "link": "https://kulturaliskozpont.com/esemeny/az-ackroydgyilkossag--veres-1-szinhaz/195"
     },
     {
-      "title": "Férfi kézilabda mérkőzés",
+      "title": "Férfi NB II kézilabda mérkőzés",
       "date": "2025-11-22T17:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/ferfi-kezilabda-merkozes/180"
+      "link": "https://kulturaliskozpont.com/esemeny/ferfi-nb-ii-kezilabda-merkozes/180"
     },
     {
-      "title": "Futsal meccs",
+      "title": "Férfi FUTSAL mérkőzés",
       "date": "2025-11-24T19:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/futsal-meccs/183"
+      "link": "https://kulturaliskozpont.com/esemeny/ferfi-futsal-merkozes/183"
     },
     {
       "title": "Kiss Ádám önálló estje - Mit nem mondok",
