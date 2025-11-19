@@ -75,10 +75,28 @@
   ],
   "events": [
     {
+      "title": "Karácsonyi fotózás",
+      "date": "2025-11-22T09:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/karacsonyi-fotozas/215"
+    },
+    {
       "title": "Férfi NB II kézilabda mérkőzés",
       "date": "2025-11-22T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/ferfi-nb-ii-kezilabda-merkozes/180"
+    },
+    {
+      "title": "CrossYounity koncert - Szívem lángol",
+      "date": "2025-11-22T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/crossyounity-koncert--szivem-langol/217"
+    },
+    {
+      "title": "Karácsonyi fotózás",
+      "date": "2025-11-23T09:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/karacsonyi-fotozas/216"
     },
     {
       "title": "Férfi FUTSAL mérkőzés",
@@ -105,6 +123,30 @@
       "link": "https://kulturaliskozpont.com/esemeny/adventi-fenyfelgyujtas-elso-adventi-gyertyagyujtas/221"
     },
     {
+      "title": "Meseország  - Magyar népmesék 60 percben",
+      "date": "2025-12-03T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/meseorszag---magyar-nepmesek-60-percben/229"
+    },
+    {
+      "title": "Meseország - Magyar népmesék 60 percben",
+      "date": "2025-12-03T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/\tmeseorszag--magyar-nepmesek-60-percben/230"
+    },
+    {
+      "title": "Meseország - Magyar népmesék 60 percben",
+      "date": "2025-12-04T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/meseorszag--magyar-nepmesek-60-percben/231"
+    },
+    {
+      "title": "Meseország - Magyar népmesék 60 percben",
+      "date": "2025-12-04T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/meseorszag--magyar-nepmesek-60-percben/232"
+    },
+    {
       "title": "Második Adventi gyertyagyújtás",
       "date": "2025-12-07T16:00:00.000Z",
       "manual": false,
@@ -115,6 +157,12 @@
       "date": "2025-12-14T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/harmadik-adventi-gyertyagyujtas/223"
+    },
+    {
+      "title": "Adventi hangverseny",
+      "date": "2025-12-14T18:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/adventi-hangverseny/233"
     },
     {
       "title": "Egy csók és más semmi - Pesti Művész Színház",
