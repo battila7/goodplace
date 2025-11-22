@@ -112,15 +112,15 @@
     },
     {
       "title": "Adventi készülődés",
-      "date": "2025-11-29T16:00:00.000Z",
+      "date": "2025-11-29T15:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/adventi-keszulodes/220"
     },
     {
-      "title": "Adventi fényfelgyújtás, első Adventi gyertyagyújtás",
+      "title": "Adventi fényfelgyújtás, első Adventi gyertyagyújtás, Városi Mikulás Nap",
       "date": "2025-11-30T15:30:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/adventi-fenyfelgyujtas-elso-adventi-gyertyagyujtas/221"
+      "link": "https://kulturaliskozpont.com/esemeny/adventi-fenyfelgyujtas-elso-adventi-gyertyagyujtas-varosi-mikulas-nap/221"
     },
     {
       "title": "Meseország  - Magyar népmesék 60 percben",
@@ -169,6 +169,12 @@
       "date": "2025-12-16T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/egy-csok-es-mas-semmi--pesti-muvesz-szinhaz/218"
+    },
+    {
+      "title": "Bátori Karácsony, Negyedik Adventi gyertyagyújtás",
+      "date": "2025-12-21T15:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/batori-karacsony-negyedik-adventi-gyertyagyujtas/224"
     }
   ]
 }
