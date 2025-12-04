@@ -75,24 +75,6 @@
   ],
   "events": [
     {
-      "title": "Meseország  - Magyar népmesék 60 percben",
-      "date": "2025-12-03T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/meseorszag---magyar-nepmesek-60-percben/229"
-    },
-    {
-      "title": "Meseország - Magyar népmesék 60 percben",
-      "date": "2025-12-03T14:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/\tmeseorszag--magyar-nepmesek-60-percben/230"
-    },
-    {
-      "title": "Szaunaszeánsz",
-      "date": "2025-12-03T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/246"
-    },
-    {
       "title": "Meseország - Magyar népmesék 60 percben",
       "date": "2025-12-04T10:00:00.000Z",
       "manual": false,
@@ -130,9 +112,21 @@
     },
     {
       "title": "Szaunaszeánsz",
+      "date": "2025-12-07T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/252"
+    },
+    {
+      "title": "Szaunaszeánsz",
       "date": "2025-12-10T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/249"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-12T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/253"
     },
     {
       "title": "Harmadik Adventi gyertyagyújtás",
@@ -163,6 +157,12 @@
       "date": "2025-12-21T15:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/batori-karacsony-negyedik-adventi-gyertyagyujtas/224"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-23T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/251"
     },
     {
       "title": "Óévbúcsúztató",
