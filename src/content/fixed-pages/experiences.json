@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Meseország - Magyar népmesék 60 percben",
-      "date": "2025-12-04T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/meseorszag--magyar-nepmesek-60-percben/231"
-    },
-    {
-      "title": "Meseország - Magyar népmesék 60 percben",
-      "date": "2025-12-04T14:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/meseorszag--magyar-nepmesek-60-percben/232"
-    },
-    {
       "title": "Szaunaszeánsz",
       "date": "2025-12-05T16:30:00.000Z",
       "manual": false,
@@ -129,6 +117,18 @@
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/253"
     },
     {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-13T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/254"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-14T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/255"
+    },
+    {
       "title": "Harmadik Adventi gyertyagyújtás",
       "date": "2025-12-14T17:00:00.000Z",
       "manual": false,
@@ -163,6 +163,18 @@
       "date": "2025-12-23T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/251"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-27T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/256"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2025-12-28T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/257"
     },
     {
       "title": "Óévbúcsúztató",
