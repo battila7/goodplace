@@ -73,12 +73,5 @@
       "content": "2025.11.08-án a gyerekeké a wellness fürdő"
     }
   ],
-  "events": [
-    {
-      "title": "Újévi koncert",
-      "date": "2026-01-01T17:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/ujevi-koncert/258"
-    }
-  ]
+  "events": []
 }
