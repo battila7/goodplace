@@ -73,5 +73,12 @@
       "content": "2025.11.08-án a gyerekeké a wellness fürdő"
     }
   ],
-  "events": []
+  "events": [
+    {
+      "title": "Társasjáték est",
+      "date": "2026-01-30T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-est/277"
+    }
+  ]
 }
