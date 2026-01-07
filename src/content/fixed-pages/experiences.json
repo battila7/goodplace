@@ -75,10 +75,34 @@
   ],
   "events": [
     {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-07T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/279"
+    },
+    {
+      "title": "Véradás",
+      "date": "2026-01-23T12:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/veradas/278"
+    },
+    {
       "title": "Társasjáték est",
       "date": "2026-01-30T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-est/277"
+    },
+    {
+      "title": "Filharmónia - Ketten az úton",
+      "date": "2026-02-05T08:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/filharmonia--ketten-az-uton/273"
+    },
+    {
+      "title": "Filharmónia - Ketten az úton",
+      "date": "2026-02-05T09:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/filharmonia--ketten-az-uton/274"
     }
   ]
 }
