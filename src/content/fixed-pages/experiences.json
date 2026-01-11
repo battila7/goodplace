@@ -76,15 +76,15 @@
   "events": [
     {
       "title": "Szaunaszeánsz",
-      "date": "2026-01-10T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/280"
-    },
-    {
-      "title": "Szaunaszeánsz",
       "date": "2026-01-11T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/281"
+    },
+    {
+      "title": "Kiállításmegnyitó a Városi Galériában",
+      "date": "2026-01-22T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/kiallitasmegnyito-a-varosi-galeriaban/282"
     },
     {
       "title": "Véradás",
@@ -109,6 +109,18 @@
       "date": "2026-02-05T09:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/filharmonia--ketten-az-uton/274"
+    },
+    {
+      "title": "Fejben dől el - Kőhalmi Zoltán önálló estje",
+      "date": "2026-02-06T18:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/fejben-dol-el--kohalmi-zoltan-onallo-estje/285"
+    },
+    {
+      "title": "Loveshake - Az élet összeráz - Delta Produkció",
+      "date": "2026-02-09T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/loveshake--az-elet-osszeraz--delta-produkcio/283"
     }
   ]
 }
