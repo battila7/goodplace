@@ -75,16 +75,46 @@
   ],
   "events": [
     {
-      "title": "Kiállításmegnyitó a Városi Galériában",
-      "date": "2026-01-22T16:30:00.000Z",
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-14T16:30:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/kiallitasmegnyito-a-varosi-galeriaban/282"
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/289"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-16T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/291"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-21T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/292"
     },
     {
       "title": "Véradás",
       "date": "2026-01-23T12:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/veradas/278"
+    },
+    {
+      "title": "Kiállításmegnyitó a Városi Galériában",
+      "date": "2026-01-23T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/kiallitasmegnyito-a-varosi-galeriaban/282"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-24T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/293"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-25T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/294"
     },
     {
       "title": "Társasjáték est",
