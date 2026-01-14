@@ -99,10 +99,10 @@
       "link": "https://kulturaliskozpont.com/esemeny/veradas/278"
     },
     {
-      "title": "Kiállításmegnyitó a Városi Galériában",
-      "date": "2026-01-23T16:30:00.000Z",
+      "title": "A színek mágiája - Tóth Mária kiállítása",
+      "date": "2026-01-23T17:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/kiallitasmegnyito-a-varosi-galeriaban/282"
+      "link": "https://kulturaliskozpont.com/esemeny/a-szinek-magiaja--toth-maria-kiallitasa/282"
     },
     {
       "title": "Szaunaszeánsz",
@@ -115,6 +115,18 @@
       "date": "2026-01-25T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/294"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-28T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/295"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-30T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/296"
     },
     {
       "title": "Társasjáték est",
@@ -151,6 +163,12 @@
       "date": "2026-02-10T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/loveshake--az-elet-osszeraz--delta-produkcio/284"
+    },
+    {
+      "title": "Városi megemlékezés",
+      "date": "2026-03-13T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/varosi-megemlekezes/299"
     }
   ]
 }
