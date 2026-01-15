@@ -76,12 +76,6 @@
   "events": [
     {
       "title": "Szaunaszeánsz",
-      "date": "2026-01-14T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/289"
-    },
-    {
-      "title": "Szaunaszeánsz",
       "date": "2026-01-16T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/291"
@@ -133,6 +127,12 @@
       "date": "2026-01-30T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-est/277"
+    },
+    {
+      "title": "Szaunaszeánsz",
+      "date": "2026-01-31T16:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/320"
     },
     {
       "title": "Filharmónia - Ketten az úton",
