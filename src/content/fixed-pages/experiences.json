@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szaunaszeánsz",
-      "date": "2026-01-21T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/292"
-    },
-    {
       "title": "Véradás",
       "date": "2026-01-23T12:30:00.000Z",
       "manual": false,
@@ -117,10 +111,10 @@
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/296"
     },
     {
-      "title": "Társasjáték est",
+      "title": "Társasjáték klub",
       "date": "2026-01-30T17:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-est/277"
+      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-klub/277"
     },
     {
       "title": "Szaunaszeánsz",
