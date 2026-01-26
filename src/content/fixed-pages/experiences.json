@@ -76,12 +76,6 @@
   "events": [
     {
       "title": "Szaunaszeánsz",
-      "date": "2026-01-25T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/294"
-    },
-    {
-      "title": "Szaunaszeánsz",
       "date": "2026-01-28T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/295"
@@ -157,6 +151,18 @@
       "date": "2026-02-21T11:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/roplabda-/322"
+    },
+    {
+      "title": "Manógyár - avagy mindenkinek vannak manói",
+      "date": "2026-02-24T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/manogyar--avagy-mindenkinek-vannak-manoi-/240"
+    },
+    {
+      "title": "Manógyár - avagy mindenkinek vannak manói",
+      "date": "2026-02-24T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/manogyar--avagy-mindenkinek-vannak-manoi-/241"
     },
     {
       "title": "Városi megemlékezés",
