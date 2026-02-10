@@ -76,12 +76,6 @@
   "events": [
     {
       "title": "Loveshake - Az élet összeráz - Delta Produkció",
-      "date": "2026-02-09T19:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/loveshake--az-elet-osszeraz--delta-produkcio/283"
-    },
-    {
-      "title": "Loveshake - Az élet összeráz - Delta Produkció",
       "date": "2026-02-10T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/loveshake--az-elet-osszeraz--delta-produkcio/284"
@@ -193,6 +187,12 @@
       "date": "2026-02-28T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/ferfi-kezilabda-merkozes/321"
+    },
+    {
+      "title": "Zorán",
+      "date": "2026-03-11T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/zoran/271"
     },
     {
       "title": "Városi megemlékezés",
