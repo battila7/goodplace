@@ -75,24 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szaunaszeánsz",
-      "date": "2026-02-20T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/336"
-    },
-    {
-      "title": "Röplabda",
-      "date": "2026-02-21T11:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/roplabda-/322"
-    },
-    {
-      "title": "Szaunaszeánsz",
-      "date": "2026-02-21T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/337"
-    },
-    {
       "title": "Manógyár - avagy mindenkinek vannak manói",
       "date": "2026-02-24T10:00:00.000Z",
       "manual": false,
@@ -151,6 +133,12 @@
       "date": "2026-03-13T13:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/varosi-megemlekezes/299"
+    },
+    {
+      "title": "Szép nyári nap - A Neoton musical - Veres 1 Színház",
+      "date": "2026-03-23T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szep-nyari-nap--a-neoton-musical--veres-1-szinhaz/342"
     }
   ]
 }
