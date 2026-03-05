@@ -195,10 +195,22 @@
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/355"
     },
     {
+      "title": "Társasjáték klub",
+      "date": "2026-03-28T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-klub/375"
+    },
+    {
       "title": "Szaunaszeánsz",
       "date": "2026-03-29T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/363"
+    },
+    {
+      "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
+      "date": "2026-04-15T11:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/dongo-egyuttes--magyar-koltok--magyar-evszazadok/374"
     }
   ]
 }
