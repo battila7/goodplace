@@ -76,12 +76,6 @@
   "events": [
     {
       "title": "Szaunaszeánsz",
-      "date": "2026-03-07T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/356"
-    },
-    {
-      "title": "Szaunaszeánsz",
       "date": "2026-03-08T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/348"
@@ -199,6 +193,12 @@
       "date": "2026-03-29T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/363"
+    },
+    {
+      "title": "Húsvéti játszóház",
+      "date": "2026-04-06T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/husveti-jatszohaz/300"
     },
     {
       "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
