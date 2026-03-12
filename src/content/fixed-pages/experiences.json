@@ -75,24 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-11T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/357"
-    },
-    {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-11T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/358"
-    },
-    {
-      "title": "Zorán",
-      "date": "2026-03-11T19:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/zoran/271"
-    },
-    {
       "title": "Városi megemlékezés",
       "date": "2026-03-13T13:00:00.000Z",
       "manual": false,
@@ -199,6 +181,12 @@
       "date": "2026-04-08T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/378"
+    },
+    {
+      "title": "Kézilabda meccs",
+      "date": "2026-04-10T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/377"
     },
     {
       "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
