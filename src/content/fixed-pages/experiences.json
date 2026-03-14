@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Városi megemlékezés",
-      "date": "2026-03-13T13:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/varosi-megemlekezes/299"
-    },
-    {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-13T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/349"
-    },
-    {
       "title": "Szaunaszeánsz",
       "date": "2026-03-14T16:30:00.000Z",
       "manual": false,
@@ -205,6 +193,12 @@
       "date": "2026-04-10T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/377"
+    },
+    {
+      "title": "Foci meccs - Bozsik",
+      "date": "2026-04-12T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/foci-meccs--bozsik/381"
     },
     {
       "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
