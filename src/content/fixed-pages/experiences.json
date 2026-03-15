@@ -76,12 +76,6 @@
   "events": [
     {
       "title": "Szaunaszeánsz",
-      "date": "2026-03-14T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/359"
-    },
-    {
-      "title": "Szaunaszeánsz",
       "date": "2026-03-15T16:30:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/360"
@@ -199,6 +193,12 @@
       "date": "2026-04-12T10:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/foci-meccs--bozsik/381"
+    },
+    {
+      "title": "SpanyolHátha (Hőguta) - Hangjegy Színház",
+      "date": "2026-04-13T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/spanyolhatha-hoguta--hangjegy-szinhaz/343"
     },
     {
       "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
