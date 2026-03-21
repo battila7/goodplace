@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-20T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/350"
-    },
-    {
-      "title": "A víz titkai",
-      "date": "2026-03-20T17:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/a-viz-titkai/388"
-    },
-    {
       "title": "Húsvéti mézeskalács készítő workshop",
       "date": "2026-03-21T10:00:00.000Z",
       "manual": false,
@@ -217,6 +205,12 @@
       "date": "2026-04-16T18:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/batori-estek--cimbali-trio/165"
+    },
+    {
+      "title": "Kicsi Gesztenye Klub - Kalandra fel!",
+      "date": "2026-04-19T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/kicsi-gesztenye-klub--kalandra-fel/365"
     }
   ]
 }
