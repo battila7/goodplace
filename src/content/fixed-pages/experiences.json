@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Ölbéli mondókázás",
-      "date": "2026-03-25T11:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/olbeli-mondokazas/389"
-    },
-    {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-25T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/362"
-    },
-    {
       "title": "Bátori estek - Budapest Saxophone Quartet",
       "date": "2026-03-26T18:00:00.000Z",
       "manual": false,
@@ -135,10 +123,46 @@
       "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/378"
     },
     {
+      "title": "Pipiána hoppsz és a mormota titka",
+      "date": "2026-04-10T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/-pipiana-hoppsz-es-a-mormota-titka/413"
+    },
+    {
+      "title": "Agyugrász",
+      "date": "2026-04-10T12:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/agyugrasz/414"
+    },
+    {
+      "title": "Beléd estem",
+      "date": "2026-04-10T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/beled-estem/415"
+    },
+    {
+      "title": "Magyar menyegző",
+      "date": "2026-04-10T16:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/magyar-menyegzo/416"
+    },
+    {
       "title": "Kézilabda meccs",
       "date": "2026-04-10T17:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/377"
+    },
+    {
+      "title": "Tavaszi szél - Az ébredés",
+      "date": "2026-04-10T18:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tavaszi-szel--az-ebredes/417"
+    },
+    {
+      "title": "Itt érzem magam otthon",
+      "date": "2026-04-10T20:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/itt-erzem-magam-otthon/418"
     },
     {
       "title": "Foci meccs - Bozsik",
