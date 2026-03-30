@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szaunaszeánsz",
-      "date": "2026-03-29T16:30:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szaunaszeansz/363"
-    },
-    {
       "title": "Húsvéti játszóház",
       "date": "2026-04-06T10:00:00.000Z",
       "manual": false,
@@ -181,6 +175,12 @@
       "date": "2026-04-19T10:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/kicsi-gesztenye-klub--kalandra-fel/365"
+    },
+    {
+      "title": "Idővel - Kovács András Péter önálló estje",
+      "date": "2026-04-28T18:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/idovel--kovacs-andras-peter-onallo-estje/391"
     }
   ]
 }
