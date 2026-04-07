@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Húsvéti játszóház",
-      "date": "2026-04-06T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/husveti-jatszohaz/300"
-    },
-    {
       "title": "Kézilabda meccs",
       "date": "2026-04-08T17:00:00.000Z",
       "manual": false,
@@ -211,6 +205,18 @@
       "date": "2026-05-04T19:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/lanyok-fiuk--loupe-szinhazi-tarsulas/411"
+    },
+    {
+      "title": "A rézerdő lakói - Méhes Csaba és a Brass in the Five",
+      "date": "2026-05-05T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/a-rezerdo-lakoi--mehes-csaba-es-a-brass-in-the-five/394"
+    },
+    {
+      "title": "A rézerdő lakói - Méhes Csaba és a Brass in the Five",
+      "date": "2026-05-05T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/a-rezerdo-lakoi--mehes-csaba-es-a-brass-in-the-five/395"
     }
   ]
 }
