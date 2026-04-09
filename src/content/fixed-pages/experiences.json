@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Kézilabda meccs",
-      "date": "2026-04-08T17:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/378"
-    },
-    {
       "title": "Pipiána hoppsz és a mormota titka",
       "date": "2026-04-10T10:00:00.000Z",
       "manual": false,
@@ -195,6 +189,12 @@
       "link": "https://kulturaliskozpont.com/esemeny/kezilabda-meccs/376"
     },
     {
+      "title": "Szerenád est",
+      "date": "2026-04-30T19:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/szerenad-est/302"
+    },
+    {
       "title": "Városi Majális",
       "date": "2026-05-01T10:00:00.000Z",
       "manual": false,
@@ -223,6 +223,12 @@
       "date": "2026-05-05T14:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/a-rezerdo-lakoi--mehes-csaba-es-a-brass-in-the-five/395"
+    },
+    {
+      "title": "A Nyírbátori Fúvószenekar évzáró koncertje",
+      "date": "2026-06-27T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/a-nyirbatori-fuvoszenekar-evzaro-koncertje/431"
     }
   ]
 }
