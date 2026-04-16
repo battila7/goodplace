@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Dongó együttes - Évszakok és hónapok - Szólnak hozzá dallamok",
-      "date": "2026-04-15T09:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/dongo-egyuttes--evszakok-es-honapok--szolnak-hozza-dallamok/373"
-    },
-    {
-      "title": "Dongó együttes - Magyar költők - Magyar évszázadok",
-      "date": "2026-04-15T11:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/dongo-egyuttes--magyar-koltok--magyar-evszazadok/374"
-    },
-    {
       "title": "Filharmónia - Cimbali Trió",
       "date": "2026-04-16T08:00:00.000Z",
       "manual": false,
@@ -103,6 +91,18 @@
       "date": "2026-04-16T18:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/batori-estek--cimbali-trio/165"
+    },
+    {
+      "title": "Lego nap a Kuckóban",
+      "date": "2026-04-18T09:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/lego-nap-a-kuckoban/436"
+    },
+    {
+      "title": "Társasjáték klubnap",
+      "date": "2026-04-18T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatek-klubnap/437"
     },
     {
       "title": "Kicsi Gesztenye Klub - Kalandra fel!",
