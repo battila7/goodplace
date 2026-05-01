@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Szerenád est",
-      "date": "2026-04-30T19:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/szerenad-est/302"
-    },
-    {
       "title": "Városi Majális",
       "date": "2026-05-01T10:00:00.000Z",
       "manual": false,
@@ -91,12 +85,6 @@
       "date": "2026-05-02T20:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/geszti-peter-koncert/425"
-    },
-    {
-      "title": "Lányok, fiúk - Loupe Színházi Társulás",
-      "date": "2026-05-04T19:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/lanyok-fiuk--loupe-szinhazi-tarsulas/411"
     },
     {
       "title": "A rézerdő lakói - Méhes Csaba és a Brass in the Five",
