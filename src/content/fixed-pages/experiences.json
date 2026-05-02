@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Városi Majális",
-      "date": "2026-05-01T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/varosi-majalis/303"
-    },
-    {
       "title": "Geszti Péter koncert",
       "date": "2026-05-02T20:00:00.000Z",
       "manual": false,
