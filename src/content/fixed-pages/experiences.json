@@ -75,6 +75,12 @@
   ],
   "events": [
     {
+      "title": "Három Torony Túra",
+      "date": "2026-07-04T16:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/harom-torony-tura/465"
+    },
+    {
       "title": "Bátori Korzó: perpētuum minimal & Andalgó",
       "date": "2026-07-04T20:00:00.000Z",
       "manual": false,
@@ -99,10 +105,22 @@
       "link": "https://kulturaliskozpont.com/esemeny/magna-cum-laude--retro-nap/427"
     },
     {
+      "title": "Három Torony Túra",
+      "date": "2026-07-18T16:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/harom-torony-tura/466"
+    },
+    {
       "title": "Bátori Korzó: Latin Projekt & Duo Don Pedro’z",
       "date": "2026-07-18T20:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/batori-korzo-latin-projekt--duo-don-pedro’z/432"
+    },
+    {
+      "title": "Három Torony Túra",
+      "date": "2026-07-25T16:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/harom-torony-tura/467"
     },
     {
       "title": "Bátori Korzó: Időutazók & Acoustic Guitar Caffe",
