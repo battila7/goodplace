@@ -75,10 +75,34 @@
   ],
   "events": [
     {
+      "title": "Ölbéli mondókázás és ének",
+      "date": "2026-09-09T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/olbeli-mondokazas-es-enek/486"
+    },
+    {
+      "title": "Babajóga",
+      "date": "2026-09-16T10:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/babajoga/488"
+    },
+    {
+      "title": "Ölbéli mondókázás és ének",
+      "date": "2026-09-23T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/olbeli-mondokazas-es-enek/487"
+    },
+    {
       "title": "36. Szüreti felvonulás",
       "date": "2026-09-25T14:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/36-szureti-felvonulas/310"
+    },
+    {
+      "title": "Társasjátékozás",
+      "date": "2026-09-26T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tarsasjatekozas/489"
     }
   ]
 }
