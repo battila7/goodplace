@@ -75,18 +75,6 @@
   ],
   "events": [
     {
-      "title": "Ölbéli mondókázás és ének",
-      "date": "2026-10-21T10:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/olbeli-mondokazas-es-enek/493"
-    },
-    {
-      "title": "Jógakaland - Gyermekjóga Koncsek Mónikával",
-      "date": "2026-10-21T17:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/jogakaland--gyermekjoga-koncsek-monikaval/494"
-    },
-    {
       "title": "Rémségek Kuckója",
       "date": "2026-10-26T08:00:00.000Z",
       "manual": false,
@@ -103,6 +91,12 @@
       "date": "2026-10-30T14:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/ijeszto-jelmezek-balja/498"
+    },
+    {
+      "title": "Jógakaland - Gyermekjóga Koncsek Mónikával",
+      "date": "2026-11-03T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/jogakaland--gyermekjoga-koncsek-monikaval/494"
     },
     {
       "title": "Filharmónia - Rézvarázs - Ewald Rézfúvós Együttes",
