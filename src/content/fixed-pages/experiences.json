@@ -75,10 +75,16 @@
   ],
   "events": [
     {
-      "title": "Jógakaland - Gyermekjóga Koncsek Mónikával",
-      "date": "2026-11-03T17:00:00.000Z",
+      "title": "A szociális munka napja",
+      "date": "2026-11-06T18:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/jogakaland--gyermekjoga-koncsek-monikaval/494"
+      "link": "https://kulturaliskozpont.com/esemeny/a-szocialis-munka-napja/517"
+    },
+    {
+      "title": "Tehetséges sportolók köszöntése",
+      "date": "2026-11-09T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/tehetseges-sportolok-koszontese/518"
     },
     {
       "title": "Filharmónia - Rézvarázs - Ewald Rézfúvós Együttes",
@@ -93,6 +99,24 @@
       "link": "https://kulturaliskozpont.com/esemeny/filharmonia--rezvarazs--ewald-rezfuvos-egyuttes/505"
     },
     {
+      "title": "XII. Országos Rajzfilmünnep - vetítés",
+      "date": "2026-11-14T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/xii-orszagos-rajzfilmunnep--vetites/539"
+    },
+    {
+      "title": "50 éves a Tinódi Vegyeskar - Jubileumi műsor",
+      "date": "2026-11-14T15:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/50-eves-a-tinodi-vegyeskar--jubileumi-musor/521"
+    },
+    {
+      "title": "XII. Országos Rajzfilmünnep - vetítés",
+      "date": "2026-11-14T15:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/xii-orszagos-rajzfilmunnep--vetites/552"
+    },
+    {
       "title": "5 éves a Varázslat Bábcsoport - Jubileumi műsor",
       "date": "2026-11-17T17:00:00.000Z",
       "manual": false,
@@ -105,16 +129,34 @@
       "link": "https://kulturaliskozpont.com/esemeny/lego-nap/533"
     },
     {
-      "title": "Kuckómesék",
+      "title": "Kuckómesék - Mesekuckó - Interaktív mesedélután Koncsek Mónika Pompás Mesés Nagykövettel",
       "date": "2026-11-21T15:00:00.000Z",
       "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/kuckomesek/534"
+      "link": "https://kulturaliskozpont.com/esemeny/kuckomesek--mesekucko--interaktiv-mesedelutan-koncsek-monika-pompas-meses-nagykovettel/534"
     },
     {
       "title": "Mikulás postaládájának átadása",
       "date": "2026-11-25T11:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/mikulas-postaladajanak-atadasa/535"
+    },
+    {
+      "title": "Bátori jégpálya nyitás",
+      "date": "2026-11-27T17:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/batori-jegpalya-nyitas/537"
+    },
+    {
+      "title": "Adventi készülődés",
+      "date": "2026-11-28T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/adventi-keszulodes/538"
+    },
+    {
+      "title": "Adventi fények felkapcsolása, Első Adventi gyertyagyújtás, a Városi Mikulás érkezése",
+      "date": "2026-11-29T15:30:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/adventi-fenyek-felkapcsolasa-elso-adventi-gyertyagyujtas-a-varosi-mikulas-erkezese/314"
     },
     {
       "title": "S.Ö.R. - Shakespeare összes rövidítve - Dudás Kultúra",
