@@ -75,12 +75,6 @@
   ],
   "events": [
     {
-      "title": "Tehetséges sportolók köszöntése",
-      "date": "2026-11-09T17:00:00.000Z",
-      "manual": false,
-      "link": "https://kulturaliskozpont.com/esemeny/tehetseges-sportolok-koszontese/518"
-    },
-    {
       "title": "Filharmónia - Rézvarázs - Ewald Rézfúvós Együttes",
       "date": "2026-11-12T08:00:00.000Z",
       "manual": false,
@@ -175,6 +169,18 @@
       "date": "2026-12-08T14:00:00.000Z",
       "manual": false,
       "link": "https://kulturaliskozpont.com/esemeny/maugli-a-dzsungel-fia--gorbe-tukor-tarsulat/540"
+    },
+    {
+      "title": "Maugli, a dzsungel fia - Görbe Tükör Társulat",
+      "date": "2026-12-09T10:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/maugli-a-dzsungel-fia--gorbe-tukor-tarsulat/541"
+    },
+    {
+      "title": "Maugli, a dzsungel fia - Görbe Tükör Társulat",
+      "date": "2026-12-09T14:00:00.000Z",
+      "manual": false,
+      "link": "https://kulturaliskozpont.com/esemeny/maugli-a-dzsungel-fia--gorbe-tukor-tarsulat/542"
     }
   ]
 }
